@@ -1,0 +1,95 @@
+{
+    "products":
+    [
+        {
+            "name": "T-shirt",
+            "colors": ["#09835E","#443D45"],
+            "price": 69.99,
+            "img": {
+                "front-main": "tshirtExample2.png",
+                "front-zoom": "",
+                "global": "",
+                "back": ""
+            },
+            "new": true,
+            "promo": 0
+
+        },
+        {
+            "name": "Wool Sweater",
+            "colors": ["#09835E","#FFFDF8"],
+            "price": 89.99,
+            "img": {
+                "front-main": "tshirtExample3.png",
+                "front-zoom": "",
+                "global": "",
+                "back": ""
+            },
+            "new": false,
+            "promo": 0
+
+        }
+        ,
+        {
+            "name": "Ski Vest",
+            "colors": ["#D72E56","#FFFDF8"],
+            "price": 89.99,
+            "img": {
+                "front-main": "tshirtExample4.png",
+                "front-zoom": "",
+                "global": "",
+                "back": ""
+            },
+            "new": false,
+            "promo": 0
+
+        }
+        ,
+        {
+            "name": "Puffer Jacket",
+            "colors": ["#672D81","#443D45"],
+            "price": 89.99,
+            "img": {
+                "front-main": "tshirtExample5.png",
+                "front-zoom": "",
+                "global": "",
+                "back": ""
+            },
+            "new": false,
+            "promo": 0
+
+        }
+        ,
+        {
+            "name": "Wool Polo",
+            "colors": ["#355EA0","#FFFDF8"],
+            "price": 89.99,
+            "img": {
+                "front-main": "tshirtExample6.png",
+                "front-zoom": "",
+                "global": "",
+                "back": ""
+            },
+            "new": false,
+            "promo": 0
+
+        },
+        {
+            "name": "Beanie",
+            "colors": ["#355EA0","#D72E56"],
+            "price": 89.99,
+            "img": {
+                "front-main": "tshirtExample7.png",
+                "front-zoom": "",
+                "global": "",
+                "back": ""
+            },
+            "new": false,
+            "promo": 0
+
+        }
+
+
+    ]
+
+}
