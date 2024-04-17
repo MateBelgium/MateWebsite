@@ -7,20 +7,35 @@
 
 }
 
-.s-section__number {
+.s-section__content {
 
-    font-size: 720px;
-    position: absolute;
+    margin: auto 240px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 102px);
+    grid-row-gap: 24px;
 
 }
 
-.s-section::before {
+.s-section__number {
 
-    content: "";
-    opacity: 0;
-
+    
     height: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 2/1;
+    
+    font-size: 720px;
+    font-family: "Panchang";
+    font-weight: 200;
+
+    overflow: hidden;
+    
+}
+
+.s-section__number > p {
+    
+    margin: 0;
+    float: inline-end;
 
 }
 
@@ -57,7 +72,7 @@
 
 .s-section__green::after {
 
-    filter: invert(35%) sepia(63%) saturate(550%) hue-rotate(111deg) brightness(101%) contrast(98%);
+    background-image: url(../img/sectionSplitGreen.svg);
 
 }
 
@@ -71,7 +86,7 @@
 
 .s-section__light::after {
 
-    filter: invert(90%) sepia(13%) saturate(458%) hue-rotate(317deg) brightness(111%) contrast(102%);
+    background-image: url(../img/sectionSplitWhite.svg);
 
 }
 
