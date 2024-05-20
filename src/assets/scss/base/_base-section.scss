@@ -137,13 +137,12 @@
         overflow: hidden;
 
         margin: 0;
-        margin-inline-start: -480px;
         
     }
     
 }
 
-.section__title {
+.s-section__title {
 
     font-family: "Panchang";
     font-weight: 700;
@@ -161,7 +160,7 @@
   
   @media all and (min-width: 1024px) {
   
-    .section__title {
+    .s-section__title {
 
         font-family: "Panchang";
         font-weight: 700;
