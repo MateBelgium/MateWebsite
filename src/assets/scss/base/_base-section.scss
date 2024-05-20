@@ -1,36 +1,31 @@
 .s-section {
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     position: relative;
+
+    padding: 30px 12px;
 
 }
 
 .s-section__content {
 
-    margin: auto 240px;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 102px);
-    grid-row-gap: 24px;
+    overflow-x: hidden;
 
 }
 
 .s-section__number {
-
     
-    height: 100%;
-    aspect-ratio: 2/1;
-    
-    font-size: 720px;
+    font-size: 120px;
     font-family: "Panchang";
     font-weight: 200;
 
     overflow: hidden;
-
-    margin-inline-start: -480px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }
 
@@ -40,25 +35,6 @@
     float: inline-end;
 
 }
-
-.s-section::after {
-
-    content: "";
-    background-image: url(../img/sectionSplit.svg);
-    background-size: cover;
-
-    z-index: 2;
-    position: absolute;
-    right: 0;
-    
-    transform-origin: 100% 50%;
-    transform: translateX(100%);
-
-    height: 100%;
-    aspect-ratio: 1/1;
-
-}
-
 
 //================
 // Section Colors
@@ -71,24 +47,11 @@
 
 }
 
-
-.s-section__green::after {
-
-    background-image: url(../img/sectionSplitGreen.svg);
-
-}
-
 .s-section__light {
 
     color: var(--color-grey-100);
     background-color: var(--color-white);
 
-
-}
-
-.s-section__light::after {
-
-    background-image: url(../img/sectionSplitWhite.svg);
 
 }
 
@@ -105,4 +68,74 @@
 .s-section {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+
+@media all and (min-width: 1024px) {
+
+    .s-section::after {
+
+        content: "";
+        background-image: url(../img/sectionSplit.svg);
+        background-size: cover;
+
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        
+        transform-origin: 100% 50%;
+        transform: translateX(100%);
+
+        height: 100%;
+        aspect-ratio: 1/1;
+
+    }
+
+    .s-section__green::after {
+
+        background-image: url(../img/sectionSplitGreen.svg);
+    
+    }
+
+    .s-section__light::after {
+
+        background-image: url(../img/sectionSplitWhite.svg);
+    
+    }
+
+    .s-section {
+
+        display: flex;
+        flex-direction: row;
+
+        position: relative;
+
+    }
+
+    .s-section__content {
+
+        margin: auto 240px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 102px);
+        grid-row-gap: 24px;
+
+    }
+
+    .s-section__number {
+
+        
+        height: 100%;
+        aspect-ratio: 2/1;
+        
+        font-size: 720px;
+        font-family: "Panchang";
+        font-weight: 200;
+
+        overflow: hidden;
+
+        margin-inline-start: -480px;
+        
+    }
+    
 }

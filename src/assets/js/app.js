@@ -8,7 +8,7 @@ function onResize() {
 
 }
 
-const element = document.querySelector(".horizontalScroll");
+const element = document.querySelector(".body__content");
 
 element.addEventListener('wheel', (event) => {
   /*event.preventDefault();*/
@@ -23,7 +23,7 @@ element.addEventListener('wheel', (event) => {
 // Drag click slide
 // ============
 
-const slider = document.querySelector('.horizontalScroll');
+const slider = document.querySelector('.body__content');
 let isDown = false;
   let startX;
   let scrollLeft;
@@ -96,6 +96,8 @@ var ISnavVisible = false;
 navButtonEl.addEventListener("click", onNavButtonClick);
 
 function onNavButtonClick(e) {
+
+  console.log("haha")
 
   if(windowWidth < 1024) {
 

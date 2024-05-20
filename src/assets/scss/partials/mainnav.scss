@@ -1,21 +1,14 @@
 .mainnav {
 
     height: 60px;
-    width: 100vw;
 
     background-color: var(--color-green-300);
 
     color: var(--color-grey-100);
 
-    position: absolute;
-    z-index: 10;
-
 }
 
 .mainnav__visible {
-
-    width: 100%;
-    height: 100%;
 
     display: grid;
     grid-template-rows: 1fr;
@@ -31,6 +24,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    border: 1px var(--color-grey-100) solid;
+    box-sizing: border-box;
 
 }
 
@@ -89,16 +85,15 @@
 
 .mainnav__hidden {
 
-    height: 100vh;
+    height: calc(100vh - 62px);
     width: 100vw;
 
     background-color: var(--color-green-300);
 
     position: absolute;
-    z-index: -1;
-    right: 0;
-    left: 100vw;
-    //left: 120px;
+    z-index: 1;
+
+    pointer-events: none;
 
     transition: all 0.2s ease;
 
@@ -120,6 +115,7 @@
     margin-block-start: -60px;
     padding-inline-start: 60px;
 
+
 }
 
 .hidden__item {
@@ -135,6 +131,8 @@
     align-items: center;
 
     transition: all 0.2s ease;
+    
+    pointer-events: all;
 
 }
 
@@ -193,6 +191,9 @@
 
         display: flex;
         flex-direction: row-reverse;
+
+        position: absolute;
+        z-index: 5;
 
     }
 
