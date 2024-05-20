@@ -1,10 +1,15 @@
 .mainnav {
 
     height: 60px;
+    width: 100%;
 
     background-color: var(--color-green-300);
 
     color: var(--color-grey-100);
+
+    
+    position: fixed;
+    z-index: 5;
 
 }
 
@@ -15,6 +20,9 @@
     grid-template-columns: 1fr 60px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+
+    background-color: var(--color-green-300);
+
 
 }
 
@@ -179,6 +187,21 @@
 
 }
 
+.hidden__credits {
+
+    height: 100%;
+    width: 100%;
+
+    background-color: red;
+
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    display: none;
+
+}
+
 // =========================
 //       SIDE SCROLL
 // =========================
@@ -193,14 +216,14 @@
         display: flex;
         flex-direction: row-reverse;
 
-        position: absolute;
-        z-index: 5;
 
     }
 
     .mainnav__visible {
 
         background-color: var(--color-green-300);
+
+        position: relative;
 
         height: 100%;
         width: 120px;
@@ -210,6 +233,7 @@
         grid-template-rows: 120px 1fr 276px;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+
     
     }
     
@@ -352,6 +376,58 @@
     }
 
     .hidden__item:hover::before {
+
+        content: "";
+
+        width: 84px;
+        height: 84px;
+
+        background-image: url(../img/Mate_Star_DarkGreen.svg);
+        background-size: cover;
+        aspect-ratio: 1/1;
+
+        display: block;
+
+        margin-inline: 60px;
+
+    }
+
+}
+
+// =========================
+//       Active
+// =========================
+
+.mainnav__active {
+
+    color: var(--color-green-100);
+
+}
+.mainnav__active::before {
+
+    content: "";
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url(../img/Mate_Star_DarkGreen.svg);
+    background-size: cover;
+    aspect-ratio: 1/1;
+
+    display: block;
+
+    margin-inline: 12px;
+
+}
+
+@media all and (min-width: 1024px) {
+
+    .mainnav__active {
+
+        color: var(--color-green-100);
+
+    }
+    .mainnav__active::before {
 
         content: "";
 

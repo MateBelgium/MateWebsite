@@ -16,19 +16,33 @@
           </div>
           <div class="mainnav__hidden">
             <ul class="hidden__list">
-              <li class="hidden__item hidden__item__selected">
-                <a href="index.html">home</a>
+              <li class="hidden__item hidden__item__selected {% if page.url === '/' %}mainnav__active{% endif %}">
+                <a href="index.html">home </a>
               </li>
-              <li class="hidden__item">
-                <a href="">collection</a>
+              <li class="hidden__item {% if 'collection' in page.url %}mainnav__active{% endif %}">
+                <a href="collection.html">collection</a>
               </li>
-              <li class="hidden__item">
-                <a href="">shop</a>
+              <li class="hidden__item {% if 'shop' in page.url %}mainnav__active{% endif %}">
+                <a href="shop.html">shop</a>
               </li>
-              <li class="hidden__item">
-                <a href="">about</a>
+              <li class="hidden__item {% if 'about' in page.url %}mainnav__active{% endif %}">
+                <a href="about.html">about</a>
               </li>
             </ul>
+            <div class="hidden__credits">
+              <ul class="credits__list">
+                <li class="credits__item">a</li>
+                <li class="credits__item">b</li>
+                <li class="credits__item">b</li>
+                <li class="credits__item">b</li>
+                <li class="credits__item">b</li>
+                <li class="credits__item">b</li>
+                <li class="credits__item">b</li>
+                <li class="credits__item">b</li>
+                <li class="credits__item">b</li>
+                <li class="credits__item">b</li>
+              </ul>
+            </div>
           </div>
         </div>
 
