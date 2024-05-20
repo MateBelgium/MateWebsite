@@ -9,12 +9,6 @@
 
 }
 
-.s-section__content {
-
-    overflow-x: hidden;
-
-}
-
 .s-section__number {
     
     font-size: 120px;
@@ -145,3 +139,31 @@
     }
     
 }
+
+h1 {
+
+    font-family: "Panchang";
+    font-weight: 700;
+    font-size: 42px;
+
+    color: var(--color-white);
+  
+    margin: 0;
+    margin-block-start: -20%;
+    margin-block-end: 2rem;
+
+    text-align: center;
+   
+  
+  }
+  
+  @media all and (min-width: 1024px) {
+  
+    h1 {
+      font-size: 240px;
+  
+      grid-area: 1 / 1 / 3 / 1;
+  
+    }
+  
+  }

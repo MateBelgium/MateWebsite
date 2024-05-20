@@ -193,7 +193,7 @@
         display: flex;
         flex-direction: row-reverse;
 
-        position: absolute;
+        position: fixed;
         z-index: 5;
 
     }
@@ -210,6 +210,7 @@
         grid-template-rows: 120px 1fr 276px;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+
     
     }
     
