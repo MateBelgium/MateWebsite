@@ -10,15 +10,34 @@ function onResize() {
 
 const element = document.querySelector(".body__content");
 
+let isScrolling = false; // Flag to prevent multiple scroll events
+let scrollMomentum = 0; // Stores momentum for smooth scrolling
+
 element.addEventListener('wheel', (event) => {
-  /*event.preventDefault();*/
-  if(windowWidth > 1023 ) {
-    element.scrollBy({
-      left: event.deltaY < 0 ? -90 : 90,
-      
-    });
+  event.preventDefault(); // Prevent default browser scrolling behavior
+
+  if (windowWidth > 1023) {
+    scrollMomentum += event.deltaY * 0.1; // Add momentum based on scroll delta (adjust factor)
+
+    if (!isScrolling) {
+      isScrolling = true;
+      const scrollInterval = setInterval(() => {
+        if (Math.abs(scrollMomentum) > 0.1) {
+          element.scrollBy({
+            left: scrollMomentum,
+            behavior: 'auto' // Disable smooth scrolling for momentum
+          });
+          scrollMomentum *= 0.9; // Gradually decrease momentum (adjust factor)
+        } else {
+          clearInterval(scrollInterval);
+          isScrolling = false;
+          scrollMomentum = 0; // Reset momentum after stopping
+        }
+      }, 10); // Adjust interval for momentum scrolling (milliseconds)
+    }
   }
 });
+
 
 // ============
 // Drag click slide
