@@ -1,0 +1,28 @@
+.parallax__container {
+
+    position: relative;
+
+}
+
+.parallax__animation__left {
+    animation-timeline: view(inline);
+
+    animation-name: appear;
+    animation-range: 0% 130%;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+    position: absolute;
+
+    background-color: aqua;
+}
+
+@keyframes appear {
+    from {
+        left: 10rem;
+    }
+
+    to {
+        left: 0px;
+    }
+}
