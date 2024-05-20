@@ -104,24 +104,24 @@ navButtonEl.addEventListener("click", onNavButtonClick);
 
 function onNavButtonClick(e) {
 
-  console.log("haha")
+  if(windowWidth < 1024) { // Mobile
 
-  if(windowWidth < 1024) {
-
-    if(ISnavVisible) {
+    if(ISnavVisible) {   // Hide Menu
+      document.body.style.position = "relative";
       navHiddenEl.style.left = "100vw";
       navStarEl.style.transform = "rotate(0deg)"
-    }else {
+    }else {   // Show Menu
       navHiddenEl.style.left = "0px";
       navStarEl.style.transform = "rotate(135deg)"
+      document.body.style.position = "fixed";
     }
 
-  }else {
+  }else { // Computer
 
-    if(ISnavVisible) {
+    if(ISnavVisible) {   // Hide Menu
       navHiddenEl.style.left = "-100vw";
       navStarEl.style.transform = "rotate(0deg)"
-    }else {
+    }else {   // Show Menu
       navHiddenEl.style.left = "120px";
       navStarEl.style.transform = "rotate(135deg)"
     }
