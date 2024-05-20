@@ -11,7 +11,7 @@
 
 .s-section__content {
 
-    overflow-x: hidden;
+    overflow: hidden;
 
 }
 
@@ -126,13 +126,15 @@
         grid-template-rows: repeat(7, 102px);
         grid-row-gap: 24px;
 
+        width: max-content;
+
     }
 
     .s-section__number {
 
         
         height: 100%;
-        aspect-ratio: 2/1;
+        aspect-ratio: 1.5/1;
         
         font-size: 720px;
         font-family: "Panchang";
@@ -140,7 +142,7 @@
 
         overflow: hidden;
 
-        margin-inline-start: -480px;
+        margin-inline-start: -400px;
         
     }
     

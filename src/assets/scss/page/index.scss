@@ -1,5 +1,184 @@
-.firstsection__title {
+.firstsection__year {
 
+    font-family: "DMSans";
+  
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
 
 
 }
+
+.firstsection__yearA {
+
+    font-weight: 300;
+    font-size: 42px;
+
+    color: var(--color-green-200);
+  
+    margin: 0;
+
+}
+
+.firstsection__yearB {
+
+    font-weight: bold;
+    font-size: 42px;
+
+    color: var(--color-green-200);
+  
+    margin: 100px 0 0 50px;
+
+}
+
+.firstsection__text{
+
+    font-weight: normal;
+    font-size: 24px;
+
+    color: var(--color-text-light);
+    text-wrap: wrap;
+
+    max-width: 1200px;
+    margin: 25px 0 0 50px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.firstsection__text-link{
+  color: var(--color-text);
+  font-weight: bold;
+  font-size: 30px;
+  align-self: flex-end;
+  margin: 0;
+}
+
+@media all and (min-width: 1024px) {
+
+    .firstsection__year {
+      font-size: 70px;
+  
+      grid-area: 3 / 1 / 8 / 1;
+  
+    }
+
+    .firstsection__yearA {
+      font-size: 600px;
+      line-height: 700px;
+    }
+
+    .firstsection__yearB {
+      font-size: 150px;
+    }
+
+  
+  }
+
+  .cardsection{
+    margin: auto 120px;
+
+    overflow: visible;
+
+    margin-bottom: 0;
+
+    width: max-content;
+  }
+
+  .reverse{
+    margin-top: 0;
+  }
+
+
+
+  .cardsection__text{
+    font-weight: normal;
+    font-size: 18px;
+
+    color: var(--color-text-light);
+
+    max-width: 850px;
+
+    margin: 0;
+  }
+
+  .cardsection__img{
+    max-width: 850px;
+    overflow: hidden;
+  }
+
+
+  @media all and (min-width: 1024px) {
+
+    .cardsection__title{
+      grid-area: 1 / 1 / 1 / 1;
+    }
+    .cardsection__text{
+      grid-area: 2 / 1 / 5 / 1;
+    }
+    .cardsection__img{
+      grid-area: 4 / 1 / 8 / 1;
+    }
+
+    .reverse .cardsection__title{
+      grid-area: 5 / 1 / 5 / 1;
+    }
+    .reverse .cardsection__text{
+      grid-area: 6 / 1 / 8 / 1;
+    }
+    .reverse .cardsection__img{
+      grid-area: 1 / 1 / 5 / 1;
+    }
+  
+  }
+
+  .learnmore{
+   width: 635px;
+   margin-top: 0;
+   margin-bottom: 0;
+
+   grid-template-rows: 1fr;
+
+   background-image: url(../img/learnMore.JPG);
+   background-size: cover;
+   background-position: center;
+
+   overflow: hidden;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+
+  .learnmore__button{
+    width: 200px;
+    height: 75px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+
+    border-radius: 100px;
+  }
+
+  .learnmore__button img{
+    max-width: 35px;
+  }
+
+  .learnmore__button p{
+    font-family: "DMSans";
+    font-weight: bold;
+    font-size: 16px;
+    
+    width: fit-content;
+  }
+
+  
