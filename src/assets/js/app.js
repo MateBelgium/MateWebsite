@@ -12,11 +12,12 @@ const element = document.querySelector(".body__content");
 
 element.addEventListener('wheel', (event) => {
   /*event.preventDefault();*/
-
-  element.scrollBy({
-    left: event.deltaY < 0 ? -90 : 90,
-    
-  });
+  if(windowWidth > 1023 ) {
+    element.scrollBy({
+      left: event.deltaY < 0 ? -90 : 90,
+      
+    });
+  }
 });
 
 // ============
@@ -29,11 +30,16 @@ let isDown = false;
   let scrollLeft;
 
   slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-    cancelMomentumTracking();
+
+    if(windowWidth > 1023 ) {
+
+      isDown = true;
+      slider.classList.add('active');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+      cancelMomentumTracking();
+
+    }
   });
   
   
@@ -83,6 +89,7 @@ let isDown = false;
       momentumID = requestAnimationFrame(momentumLoop);
     }
   }
+
 
 // ============
 // Nav
