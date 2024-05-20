@@ -1,3 +1,13 @@
+var windowWidth = window.innerWidth;
+
+addEventListener("resize", onResize);
+
+function onResize() {
+
+  windowWidth = window.innerWidth;
+
+}
+
 const element = document.querySelector(".horizontalScroll");
 
 element.addEventListener('wheel', (event) => {
@@ -73,3 +83,44 @@ let isDown = false;
       momentumID = requestAnimationFrame(momentumLoop);
     }
   }
+
+// ============
+// Nav
+// ============
+
+const navButtonEl = document.querySelector(".mainnav__button");
+const navStarEl = navButtonEl.querySelector("img")
+const navHiddenEl = document.querySelector(".mainnav__hidden");
+var ISnavVisible = false;
+
+navButtonEl.addEventListener("click", onNavButtonClick);
+
+function onNavButtonClick(e) {
+
+  if(windowWidth < 1024) {
+
+    if(ISnavVisible) {
+      navHiddenEl.style.left = "100vw";
+      navStarEl.style.transform = "rotate(0deg)"
+    }else {
+      navHiddenEl.style.left = "0px";
+      navStarEl.style.transform = "rotate(135deg)"
+    }
+
+  }else {
+
+    if(ISnavVisible) {
+      navHiddenEl.style.left = "-100vw";
+      navStarEl.style.transform = "rotate(0deg)"
+    }else {
+      navHiddenEl.style.left = "120px";
+      navStarEl.style.transform = "rotate(135deg)"
+    }
+
+  }
+
+
+
+  ISnavVisible = !ISnavVisible;
+
+}
