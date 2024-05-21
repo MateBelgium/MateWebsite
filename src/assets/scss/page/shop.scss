@@ -9,7 +9,7 @@
     position: absolute;
 
     z-index: 3;
-    padding-inline: 1000px;
+    padding-inline: 1200px;
     
 }
 
@@ -24,19 +24,15 @@
 
     animation-timeline: view(inline);
     animation-name: slideTest;
-    animation-range: 0% 200%;
+    animation-range: -10% 200%;
     animation-fill-mode: both;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
 
 }
 
 .invert {
-    
-    animation-timeline: view(inline);
+
     animation-name: slideTestInvert;
-    animation-range: 0% 200%;
-    animation-fill-mode: both;
-    animation-duration: 1ms; /* Firefox requires this to apply the animation */
 
 }
 
@@ -45,8 +41,54 @@
     width: 408px;
     height: 408px;
 
-    background-color: red;
-    border: 1px solid aqua;
+    background-color: var(--color-green-300);
+    background-size: 100%;
+    background-position: 50% 50%;
+
+    border: 1px solid var(--color-grey-100);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: all 0.2s ease;
+
+}
+
+.shop__title {
+
+    color: var(--color-grey-100);
+    font-family: 'Panchang';
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+
+    padding-block: 12px;
+    margin: 0;
+    background-color: var(--color-green-300);
+
+
+}
+
+.shop__sizes {
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 32px;
+
+    padding: 0;
+    padding-block: 12px;
+    margin: 0;
+    background-color: var(--color-green-300);
+
+    color: black;
+
+    bottom: 0;
 
 }
 
@@ -56,7 +98,7 @@
     }
 
     1% {
-        transform: translate(0, -50%);
+        transform: translate(0, -55%);
     }
 
     100% {
@@ -74,16 +116,21 @@
     }
 
     100% {
-        transform: translate(0, -50%);
+        transform: translate(0, -55%);
     }
 }
 
 .middle {
 
-    background-color: green;
-
+    background-image: url(../img/learnMore.JPG);
     height: 552px;
 
+}
+.middle:hover {
+
+    cursor: pointer;
+    background-size: 105%;
+    filter: brightness(1.3);
 
 }
   
