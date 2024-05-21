@@ -1,0 +1,62 @@
+.shop__content {
+    
+    display: flex;
+    flex-direction: row;
+    
+    grid-area: 1 / 1 / 8 / 1;
+
+    overflow: visible;
+
+    
+}
+
+.shop__list {
+    
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    
+    gap: 24px;
+
+    animation-timeline: view(inline);
+    animation-name: slideTest;
+    animation-range: 0% 200%;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+}
+
+.shop__card {
+
+    width: 408px;
+    height: 408px;
+
+    background-color: red;
+    border: 1px solid aqua;
+
+}
+
+@keyframes slideTest {
+    0% {
+        transform: translate(0, 0);
+    }
+  
+    1% {
+        transform: translate(0, -50%);
+    }
+  
+    100% {
+        transform: translate(0, 0%);
+    }
+  }
+
+.middle {
+
+    background-color: green;
+
+    height: 552px;
+
+
+}
+  
