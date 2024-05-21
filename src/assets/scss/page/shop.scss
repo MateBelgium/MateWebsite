@@ -6,7 +6,10 @@
     grid-area: 1 / 1 / 8 / 1;
 
     overflow: visible;
+    position: absolute;
 
+    z-index: 3;
+    padding-inline: 1000px;
     
 }
 
@@ -27,6 +30,16 @@
 
 }
 
+.invert {
+    
+    animation-timeline: view(inline);
+    animation-name: slideTestInvert;
+    animation-range: 0% 200%;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+}
+
 .shop__card {
 
     width: 408px;
@@ -41,15 +54,29 @@
     0% {
         transform: translate(0, 0);
     }
-  
+
     1% {
         transform: translate(0, -50%);
     }
-  
+
     100% {
         transform: translate(0, 0%);
     }
-  }
+}
+
+@keyframes slideTestInvert {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    1% {
+        transform: translate(0, 0%);
+    }
+
+    100% {
+        transform: translate(0, -50%);
+    }
+}
 
 .middle {
 
