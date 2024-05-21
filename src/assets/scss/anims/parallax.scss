@@ -25,12 +25,14 @@
     }
 }
 
+
+
 .s-section__number {
 
     animation-timeline: view(inline);
 
     animation-name: appearNumber;
-    animation-range: 20% 180%;
+    animation-range-start: cover;
     animation-fill-mode: both;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
 
@@ -38,32 +40,58 @@
 
 @keyframes appearNumber {
     from {
-        margin-inline-start: -420px;
+
+        opacity: 0;
     }
 
     to {
-        margin-inline-start: -900px;
+
+        opacity: 1;
     }
 }
 
-.s-section__title {
+@media all and (min-width: 1024px) {
 
-    animation-timeline: view(inline);
+    .s-section__number {
 
-    animation-name: appearTitle;
-    animation-range: 0% 20%;
-    animation-fill-mode: both;
-    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+        animation-timeline: view(inline);
 
-}
+        animation-name: appearNumber;
+        animation-range: 20% 180%;
+        animation-fill-mode: both;
+        animation-duration: 1ms; /* Firefox requires this to apply the animation */
 
-@keyframes appearTitle {
-    from {
-        margin-block-start: -40px;
     }
 
-    to {
-        margin-block-start: 0px;
-    }
-}
+    @keyframes appearNumber {
+        from {
+            margin-inline-start: -420px;
+        }
 
+        to {
+            margin-inline-start: -900px;
+        }
+    }
+
+    .s-section__title {
+
+        animation-timeline: view(inline);
+
+        animation-name: appearTitle;
+        animation-range: 0% 20%;
+        animation-fill-mode: both;
+        animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+    }
+
+    @keyframes appearTitle {
+        from {
+            margin-block-start: -40px;
+        }
+
+        to {
+            margin-block-start: 0px;
+        }
+    }
+
+}

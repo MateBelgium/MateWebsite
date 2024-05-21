@@ -27,6 +27,7 @@
     flex-direction: column;
     align-items: center;
 
+    margin: 0;
     margin-block-end: -4rem;
     
 }
@@ -170,8 +171,8 @@
   
 }
   
-  @media all and (min-width: 1024px) {
-  
+@media all and (min-width: 1024px) {
+
     .s-section__title {
 
         font-family: "Panchang";
@@ -182,9 +183,9 @@
         color: var(--color-black);
         
         margin: 0;
-  
+
         grid-area: 1 / 1 / 3 / 1;
-  
+
     }
-  
-  }
+
+}
