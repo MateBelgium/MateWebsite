@@ -21,3 +21,85 @@
     animation-range: entry-crossing 0% contain 100%;
 }
   
+
+@keyframes slideFromTop {
+  0% {
+      transform: translate(0, 0);
+  }
+
+  1% {
+      transform: translate(0, -10%);
+  }
+
+  100% {
+      transform: translate(0, 0);
+  }
+}
+
+.slideFromTop {
+
+  animation-timeline: view(inline);
+
+  animation-name: slideFromTop;
+  animation-range: 0% 50%;
+  animation-fill-mode: both;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+}
+
+@keyframes slideFromBottom {
+  0% {
+      transform: translate(0, 0);
+  }
+
+  1% {
+      transform: translate(0, 10%);
+  }
+
+  100% {
+      transform: translate(0, 0);
+  }
+}
+
+.slideFromBottom {
+
+  animation-timeline: view(inline);
+
+  animation-name: slideFromBottom;
+  animation-range: 0% 50%;
+  animation-fill-mode: both;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+}
+
+@media all and (min-width: 1024px) {
+
+  .s-section__number {
+
+      view-timeline: --body inline;
+      position: relative;
+      
+  }
+  
+  .s-section__number p {
+      
+      animation-timeline: --body;
+
+      animation-name: appearNumber;
+      animation-range: 20% 180%;
+      animation-fill-mode: both;
+      animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+      position: absolute
+
+  }
+
+  @keyframes appearNumber{
+      from {
+          left: -240px;
+      }
+
+      to {
+          left: -600px;
+      }
+  }
+
+}
