@@ -163,19 +163,22 @@ FIRST SECTION
 
   font-family: "DMSans";
 
-  margin: 0;
+  margin-top: -50px;
 
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .firstsection__yearA {
 
-  font-weight: 300;
+  font-weight: bold;
   font-size: 42px;
 
-  color: var(--color-green-200);
+  font-family: "Panchang";
+  color: var(--color-text-light);
 
   margin: 0;
 
@@ -186,35 +189,46 @@ FIRST SECTION
   font-weight: bold;
   font-size: 42px;
 
-  color: var(--color-green-200);
+  font-family: "Panchang";
+  color: var(--color-text-light);
 
-  margin: 100px 0 0 50px;
+  margin: 0;
 
 }
 
 .firstsection__text{
 
-  font-weight: normal;
-  font-size: 24px;
+  font-weight: 300;
+  font-size: 15px;
+
+  margin-top: 34px;
 
   color: var(--color-text-light);
   text-wrap: wrap;
 
-  max-width: 1200px;
-  margin: 25px 0 0 50px;
-
   display: flex;
-  flex-direction: row;
-  gap: 15px;
+  flex-direction: column;
+  gap: 34px;
 }
 
 .firstsection__text-link{
   color: var(--color-text);
   font-weight: bold;
   font-size: 30px;
-  align-self: flex-end;
+  align-self: center;
   margin: 0;
 }
+
+@media all and (min-width: 745px) {
+  .firstsection__text{
+    font-size: 20px;
+  
+    margin-top: 60px;
+
+    gap: 60px;
+  }
+}
+
 
 @media all and (min-width: 1024px) {
 
@@ -223,17 +237,48 @@ FIRST SECTION
 
     grid-area: 3 / 1 / 8 / 1;
 
+    justify-content: flex-start;
+    align-items: flex-start;
+
   }
 
   .firstsection__yearA {
-    font-size: 600px;
+    font-family: "DMSans";
+    font-size: 575px;
+    font-weight: 300;
     line-height: 700px;
-  }
 
+    color: var(--color-green-200);
+  }
+  
   .firstsection__yearB {
+    font-family: "DMSans";
     font-size: 150px;
+    color: var(--color-green-200);
+
+    margin: 100px 0 0 50px;
+  }
+  .firstsection__text{
+
+    font-weight: normal;
+    font-size: 20px;
+  
+    color: var(--color-text-light);
+    text-wrap: wrap;
+  
+    position: absolute;
+  
+    max-width: 1100px;
+    margin: 550px 0 0 715px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 
+  .firstsection__text-link{
+    align-self: flex-end;
+  }
 
 }
 
@@ -244,19 +289,24 @@ CARD SECTION
 */
 
 .cardsection{
-  margin: auto 120px;
+  margin-block-start: 70px;
 
   overflow: visible;
 
-  margin-bottom: 0;
+  margin-bottom: 42px;
 
-  width: max-content;
+  display: flex;
+  flex-direction: column;
+
 }
+
+.cardsection :nth-child(2){order: -1;}
 
 .reverse{
   margin-top: 0;
+  display: flex;
+  flex-direction: column;
 }
-
 
 .cardsection__text{
   font-weight: normal;
@@ -270,21 +320,69 @@ CARD SECTION
 }
 
 .cardsection__img{
-  max-width: 850px;
+  min-height: 200px;
+  min-width: 330px;
+
   overflow: hidden;
+
+  background-image: url(../img/ardennesMountains.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reverse .cardsection__img{
+  background-image: url(../img/ardennesQuality.JPG);
 }
 
 
+@media all and (min-width: 745px){
+  .cardsection{
+    flex-direction: row;
+    gap: 36px;
+    margin-bottom: 60px;
+  }
+  .cardsection__img{
+    max-width: 300px;
+    max-height: 400px;
+  }
+  .cardsection__text{
+    font-size: 16px;
+  }
+  .reverse{
+    flex-direction: row-reverse;
+  }
+}
+
 @media all and (min-width: 1024px) {
+
+  .cardsection{
+    margin: 0 120px;
+    align-self: flex-end;
+    width: max-content;
+
+    display: grid;
+  }
+  .cardsection :nth-child(3){order: 3;}
 
   .cardsection__title{
     grid-area: 1 / 1 / 1 / 1;
+    margin-bottom: 36px;
   }
   .cardsection__text{
     grid-area: 2 / 1 / 5 / 1;
   }
   .cardsection__img{
     grid-area: 4 / 1 / 8 / 1;
+
+    width: 850px;
+    max-width: none;
+    max-height: none;
+  }
+
+  .reverse{
+    display: grid;
+    align-self: flex-start;
   }
 
   .reverse .cardsection__title{
@@ -300,15 +398,13 @@ CARD SECTION
 }
 
 .learnmore{
-  width: 635px;
-  margin-top: 0;
-  margin-bottom: 0;
+  height: 200px;
+  margin: 0 -12px -30px -12px;
 
-  grid-template-rows: 1fr;
-
-  background-image: url(../img/learnMore.JPG);
+  background-image: url(../img/learnMore2.JPG);
   background-size: cover;
-  background-position: center;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 
   overflow: hidden;
 
@@ -319,14 +415,16 @@ CARD SECTION
 }
 
 .learnmore__button{
-  width: 200px;
-  height: 75px;
+  width: 150px;
+  height: 50px;
+
+  position: absolute;
 
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap:15px;
+  gap:10px;
 
   background-color: var(--color-background-dark);
   color: var(--color-text-light);
@@ -335,14 +433,62 @@ CARD SECTION
 }
 
 .learnmore__button img{
-  max-width: 35px;
+  max-width: 25px;
 }
 
 .learnmore__button p{
   font-family: "DMSans";
   font-weight: bold;
-  font-size: 16px;
+  font-size: 12px;
   
   width: fit-content;
 }
 
+
+@media all and (min-width: 745px){
+  .learnmore{
+    margin: 0 -24px -30px -24px;
+  }
+  
+}
+
+@media all and (min-width: 1024px) {
+
+  .learnmore{
+    width: 635px;
+    height: auto;
+
+    margin: 0 120px;
+  }
+
+  .learnmore__button{
+    width: 200px;
+    height: 75px;
+  
+    position: absolute;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+  
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+  
+    border-radius: 100px;
+  }
+
+  .learnmore__button img{
+    max-width: 35px;
+  }
+  
+  .learnmore__button p{
+    font-family: "DMSans";
+    font-weight: bold;
+    font-size: 16px;
+    
+    width: fit-content;
+  }
+
+}
