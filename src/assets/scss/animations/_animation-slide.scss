@@ -1,3 +1,28 @@
+@keyframes backgroundParallax {
+    0% {
+        background-position: 0% 0%;
+    }
+  
+    1% {
+        background-position: 100% 0%;
+    }
+  
+    100% {
+        background-position: 0% 0%;
+    }
+  }
+
+.anim__backgroundimg {
+
+  animation-timeline: view(inline);
+
+  animation-name: backgroundParallax;
+  animation-range: 0% 200%;
+  animation-fill-mode: both;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+}
+
 @keyframes slideRight {
     0% {
         opacity: 0;

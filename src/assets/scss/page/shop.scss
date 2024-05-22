@@ -1,16 +1,12 @@
 .shop__container {
 
-    grid-area: 1 / 1 / 8 / 1;
-
-    padding-inline-end: 240px;
-    
 }
 
 .shop__content {
     
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: column;
+
 }
 
 .shop__list {
@@ -18,11 +14,11 @@
     list-style: none;
     
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     
-    gap: 24px;
+    gap: 12px;
 
-    animation-timeline: view(inline);
+    animation-timeline: view(block);
     animation-name: slideTest;
     animation-range: -10% 200%;
     animation-fill-mode: both;
@@ -38,8 +34,8 @@
 
 .shop__card {
 
-    width: 408px;
-    height: 408px;
+    width: 200px;
+    height: 200px;
 
     background-color: var(--color-green-300);
     background-size: 100%;
@@ -63,7 +59,7 @@
     font-size: 2rem;
     text-align: center;
 
-    padding-block: 12px;
+    padding-block: 6px;
     margin: 0;
     background-color: var(--color-green-300);
 
@@ -79,10 +75,10 @@
     align-items: center;
     justify-content: center;
 
-    gap: 32px;
+    gap: 12px;
 
     padding: 0;
-    padding-block: 12px;
+    padding-block: 6px;
     margin: 0;
     background-color: var(--color-green-300);
 
@@ -98,7 +94,7 @@
     }
 
     1% {
-        transform: translate(0, -55%);
+        transform: translate(-55%, 0%);
     }
 
     100% {
@@ -116,16 +112,17 @@
     }
 
     100% {
-        transform: translate(0, -55%);
+        transform: translate(-55%, 0);
     }
 }
 
 .middle {
 
     background-image: url(../img/learnMore.JPG);
-    height: 552px;
+    width: 300px;
 
 }
+
 .middle:hover {
 
     cursor: pointer;
@@ -133,4 +130,141 @@
     filter: brightness(1.3);
 
 }
+
+@media all and (min-width: 1024px) {
+
+    .shop__container {
+
+        padding-inline-end: 240px;
+        
+    }
+
+    .shop__content {
+        
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .shop__list {
+        
+        list-style: none;
+        
+        display: flex;
+        flex-direction: column;
+        
+        gap: 24px;
+
+        animation-timeline: view(inline);
+        animation-name: slideTest;
+        animation-range: -10% 200%;
+        animation-fill-mode: both;
+        animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+    }
+
+    .invert {
+
+        animation-name: slideTestInvert;
+
+    }
+
+    .shop__card {
+
+        width: 408px;
+        height: 408px;
+
+        background-color: var(--color-green-300);
+        background-size: 100%;
+        background-position: 50% 50%;
+
+        border: 1px solid var(--color-grey-100);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        transition: all 0.2s ease;
+
+    }
+
+    .shop__title {
+
+        color: var(--color-grey-100);
+        font-family: 'Panchang';
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: center;
+
+        padding-block: 12px;
+        margin: 0;
+        background-color: var(--color-green-300);
+
+
+    }
+
+    .shop__sizes {
+
+        list-style: none;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        gap: 32px;
+
+        padding: 0;
+        padding-block: 12px;
+        margin: 0;
+        background-color: var(--color-green-300);
+
+        color: black;
+
+        bottom: 0;
+
+    }
+
+    @keyframes slideTest {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        1% {
+            transform: translate(0, -55%);
+        }
+
+        100% {
+            transform: translate(0, 0%);
+        }
+    }
+
+    @keyframes slideTestInvert {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        1% {
+            transform: translate(0, 0%);
+        }
+
+        100% {
+            transform: translate(0, -55%);
+        }
+    }
+
+    .middle {
+
+        background-image: url(../img/learnMore.JPG);
+        height: 552px;
+
+    }
+    .middle:hover {
+
+        cursor: pointer;
+        background-size: 105%;
+        filter: brightness(1.3);
+
+    }
   
+}

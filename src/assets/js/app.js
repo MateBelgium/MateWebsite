@@ -19,17 +19,17 @@ element.addEventListener('wheel', (event) => {
     event.preventDefault(); // Prevent default browser scrolling behavior
 
     if (windowWidth > 1023) {
-      scrollMomentum += event.deltaY * 0.1; // Add momentum based on scroll delta (adjust factor)
+      scrollMomentum += event.deltaY * 0.05; // Add momentum based on scroll delta (adjust factor)
 
       if (!isScrolling) {
         isScrolling = true;
         const scrollInterval = setInterval(() => {
-          if (Math.abs(scrollMomentum) > 0.1) {
+          if (Math.abs(scrollMomentum) > 0.05) {
             element.scrollBy({
               left: scrollMomentum,
               behavior: 'auto' // Disable smooth scrolling for momentum
             });
-            scrollMomentum *= 0.9; // Gradually decrease momentum (adjust factor)
+            scrollMomentum *= 0.95; // Gradually decrease momentum (adjust factor)
           } else {
             clearInterval(scrollInterval);
             isScrolling = false;
