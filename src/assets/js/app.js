@@ -12,31 +12,34 @@ const element = document.querySelector(".body__content");
 
 let isScrolling = false; // Flag to prevent multiple scroll events
 let scrollMomentum = 0; // Stores momentum for smooth scrolling
+let scrollSpeedPositive = 0.065 // Right Scroll Speed
+let scrollSpeedNegative = 0.1 // Left Scroll Speed
 
 element.addEventListener('wheel', (event) => {
 
-  if(windowWidth > 1023 ) {
+  if (windowWidth > 1023) {
     event.preventDefault(); // Prevent default browser scrolling behavior
 
-    if (windowWidth > 1023) {
-      scrollMomentum += event.deltaY * 0.05; // Add momentum based on scroll delta (adjust factor)
+    let scrollSpeed = event.deltaY > 0 ? scrollSpeedPositive : scrollSpeedNegative;
+    scrollMomentum += event.deltaY * scrollSpeed; // Add momentum based on scroll delta
 
-      if (!isScrolling) {
-        isScrolling = true;
-        const scrollInterval = setInterval(() => {
-          if (Math.abs(scrollMomentum) > 0.05) {
-            element.scrollBy({
-              left: scrollMomentum,
-              behavior: 'auto' // Disable smooth scrolling for momentum
-            });
-            scrollMomentum *= 0.95; // Gradually decrease momentum (adjust factor)
-          } else {
-            clearInterval(scrollInterval);
-            isScrolling = false;
-            scrollMomentum = 0; // Reset momentum after stopping
-          }
-        }, 10); // Adjust interval for momentum scrolling (milliseconds)
-      }
+    if (!isScrolling) {
+      isScrolling = true;
+      const scrollInterval = setInterval(() => {
+        if (Math.abs(scrollMomentum) > 0.05) {
+          element.scrollBy({
+            left: scrollMomentum,
+            behavior: 'auto' // Disable smooth scrolling for momentum
+          });
+
+          // Adjust momentum decay based on direction
+          scrollMomentum *= (scrollMomentum > 0) ? 0.92 : 0.85;  // 0.9 for right, 0.7 for left
+        } else {
+          clearInterval(scrollInterval);
+          isScrolling = false;
+          scrollMomentum = 0; // Reset momentum after stopping
+        }
+      }, 10); // Adjust interval for momentum scrolling (milliseconds)
     }
   }
 });
