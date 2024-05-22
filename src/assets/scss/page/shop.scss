@@ -1,15 +1,15 @@
+.shop__container {
+
+    grid-area: 1 / 1 / 8 / 1;
+
+    padding-inline-end: 240px;
+    
+}
+
 .shop__content {
     
     display: flex;
     flex-direction: row;
-    
-    grid-area: 1 / 1 / 8 / 1;
-
-    overflow: visible;
-    position: absolute;
-
-    z-index: 3;
-    padding-inline: 1200px;
     
 }
 

@@ -111,6 +111,13 @@
     
     }
 
+    .s-section__end::after {
+
+        width: 0;
+        height: 0;
+
+    }
+
     .s-section {
 
         display: flex;
