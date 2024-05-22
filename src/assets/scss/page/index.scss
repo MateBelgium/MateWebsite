@@ -85,6 +85,10 @@ LANDING PAGE
   
     padding: 0;
   }
+  .landPage__imgSection{
+    margin-left: -24px;
+    margin-right: -24px;
+  }
 
 }
 
@@ -308,6 +312,15 @@ CARD SECTION
   flex-direction: column;
 }
 
+.cardsection__content{
+  margin-top: 12px;
+}
+
+.cardsection__title{
+  font-size: 3vh;
+  margin-bottom: 12px;
+}
+
 .cardsection__text{
   font-weight: normal;
   font-size: 18px;
@@ -342,6 +355,9 @@ CARD SECTION
     gap: 36px;
     margin-bottom: 60px;
   }
+  .cardsection__content{
+    margin-top: 0;
+  }
   .cardsection__img{
     max-width: 300px;
     max-height: 400px;
@@ -361,6 +377,7 @@ CARD SECTION
     align-self: flex-end;
     width: max-content;
 
+
     display: grid;
   }
   .cardsection :nth-child(3){order: 3;}
@@ -368,9 +385,12 @@ CARD SECTION
   .cardsection__title{
     grid-area: 1 / 1 / 1 / 1;
     margin-bottom: 36px;
+    font-size: 6.5vh;
   }
-  .cardsection__text{
-    grid-area: 2 / 1 / 5 / 1;
+
+  .cardsection__content{
+    margin-top: 5vh;
+    grid-area: 1 / 1 / 4 / 1;
   }
   .cardsection__img{
     grid-area: 4 / 1 / 8 / 1;
@@ -388,14 +408,21 @@ CARD SECTION
   .reverse .cardsection__title{
     grid-area: 5 / 1 / 5 / 1;
   }
-  .reverse .cardsection__text{
-    grid-area: 6 / 1 / 8 / 1;
+  .reverse .cardsection__content{
+    grid-area: 5 / 1 / 8 / 1;
+    margin-top: 0;
   }
   .reverse .cardsection__img{
     grid-area: 1 / 1 / 5 / 1;
   }
 
 }
+
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+LEARN MORE
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
 
 .learnmore{
   height: 200px;
@@ -491,4 +518,162 @@ CARD SECTION
     width: fit-content;
   }
 
+}
+
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+SHOP SECTION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+.shopsection{
+  grid-column-gap: 200px;
+}
+
+.shopsection__content{
+  margin-top: 40px;
+}
+
+.shopsection__title{
+  margin-bottom: 18px;
+}
+
+.shopsection__text{
+  font-weight: normal;
+  font-size: 18px;
+
+  color: var(--color-text-light);
+
+  margin: 0;
+}
+
+.shopsection__preview{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 40px;
+  margin-bottom: 120px;
+}
+
+.shopsection__list{
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 158px);
+  grid-row-gap: 18px;
+  grid-column-gap: 17px;
+
+}
+
+.shopsection__item{
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 158px;
+
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.shopsection__item__label{
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  font-weight: bold;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 28px;
+}
+
+.shopsection__list li:nth-child(1){
+  background-image: url(../img/shopsection1.png);
+}
+.shopsection__list li:nth-child(2){
+  background-image: url(../img/shopsection2.png);
+}
+.shopsection__list li:nth-child(3){
+  background-image: url(../img/shopsection3.png);
+}
+.shopsection__list li:nth-child(4){
+  background-image: url(../img/Mate_Star.svg);
+  background-color: var(--color-accent);
+  background-size: 40%;
+  background-position: 50%;
+
+}
+
+@media all and (min-width: 745px){
+
+  .shopsection__preview{
+    margin-top: 60px;
+    margin-bottom: 90px;
+  }
+
+  .shopsection__content{
+    margin-top: 100px;
+  }
+
+  .shopsection__list{
+    display: flex;
+    flex-direction: row;
+    
+    height: 158px;
+  }
+  
+}
+
+@media all and (min-width: 1024px) {
+
+  .shopsection__preview{
+    grid-area: 2 / 2 / 7 / 2;
+  }
+
+  .shopsection__content{
+    margin-top: 0;
+    grid-area: 4 / 1 / 6 / 1;
+
+    max-width: 1100px;
+  }
+
+  .shopsection__list{
+    height: 600px;
+    grid-column-gap: 48px;
+  }
+  .shopsection__item{
+    width: 525px;
+  }
+  .shopsection__item__label{
+    height: 100px;
+    font-size: 3.5vh;
+  }
+
+  .shopsection__list li:nth-child(3)::after{
+    content: "";
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(28,28,28,1) 50%);
+    height: 600px;
+    width: 265px;
+    position: absolute;
+
+    right: 500px;
+  }
+
+  .shopsection__list li:nth-child(4){
+    width: 250px;
+    height: 250px;
+    align-self: center;
+  }
+  
 }
