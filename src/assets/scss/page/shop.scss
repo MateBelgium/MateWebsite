@@ -1,5 +1,7 @@
 .shop__container {
 
+    padding-block-start: 120px;
+
 }
 
 .shop__content {
@@ -143,17 +145,22 @@
         
         display: flex;
         flex-direction: row;
+
+        gap: 24px;
         
     }
 
     .shop__list {
-        
+
         list-style: none;
         
         display: flex;
         flex-direction: column;
         
         gap: 24px;
+        
+        margin: 0;
+        padding: 0;
 
         animation-timeline: view(inline);
         animation-name: slideTest;
@@ -200,7 +207,6 @@
         margin: 0;
         background-color: var(--color-green-300);
 
-
     }
 
     .shop__sizes {
@@ -231,7 +237,7 @@
         }
 
         1% {
-            transform: translate(0, -55%);
+            transform: translate(0, -60%);
         }
 
         100% {
@@ -249,7 +255,7 @@
         }
 
         100% {
-            transform: translate(0, -55%);
+            transform: translate(0, -60%);
         }
     }
 
