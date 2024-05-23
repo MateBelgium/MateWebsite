@@ -150,26 +150,23 @@
         grid-template-rows: repeat(7, 102px);
         grid-row-gap: 24px;
 
-
-
+        overflow: visible;
+        
     }
-
+    
     .s-section__number {
-
+        
         
         height: 100%;
-        aspect-ratio: 1.5/1;
-        
+        width: 140vh;
+
         font-size: 75vh;
         font-family: "Panchang";
         font-weight: 200;
-
-        overflow: hidden;
-
-
+        
         margin: 0;
-        margin-inline-end: -360px;
-
+        
+        overflow: clip;
         
     }
 
