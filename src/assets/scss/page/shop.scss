@@ -105,7 +105,7 @@
 
 @keyframes slideTest {
     0% {
-        transform: translate(0, 0);
+        transform: translateX(50vw);
     }
 
     1% {
@@ -113,17 +113,17 @@
     }
 
     100% {
-        transform: translate(-45%, 0);
+        transform: translate(calc(-50% + 12px), 0);
     }
 }
 
 @keyframes slideTestInvert {
     0% {
-        transform: translate(0, 0);
+        transform: translateX(50vw);
     }
 
     1% {
-        transform: translate(-45%, 0);
+        transform: translate(calc(-50% + 12px), 0);
     }
 
     100% {
@@ -277,7 +277,7 @@
 
     @keyframes slideTest {
         0% {
-            transform: translate(0, 0);
+            transform: translate(0, -33%);
         }
 
         1% {
@@ -291,7 +291,7 @@
 
     @keyframes slideTestInvert {
         0% {
-            transform: translate(0, 0);
+            transform: translate(0, -33%);
         }
 
         1% {
