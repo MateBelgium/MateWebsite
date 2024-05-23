@@ -3,18 +3,21 @@
 LANDING PAGE
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
+
 .landPage{
-  overflow: visible;
+  overflow: visible; //allow image to spill out of div.
 }
 
 .landPage__logo{
-  display: none;
+  display: none; //hide this logo for desktop
 
-  z-index: 2;  
+  z-index: 2;  //make sure logo is above image
 }
 
 .landPage__logoHidden{
-  width: 215px;
+  display: block;
+
+  width: 215px; //
 
   z-index: 2;  
 }
@@ -308,7 +311,7 @@ CARD SECTION
 }
 
 .cardsection:hover{
-  height: 570px;
+  height: 85vh;
 }
 
 .cardsection:hover{
@@ -787,6 +790,8 @@ ABOUT US SECTION
 .aboutus__item{
   height: 100px;
 
+  padding-inline: 12px;
+
   overflow: clip;
 
   border: 1px var(--color-grey-100);
@@ -801,7 +806,7 @@ ABOUT US SECTION
 
 .aboutus__item:hover{
   cursor: pointer;
-  height: 275px;
+  height: 42vh;
   background-color: var(--color-green-400);
 }
 
@@ -819,6 +824,8 @@ ABOUT US SECTION
 .aboutus__value__text{
   font-weight: normal;
   font-size: 18px;
+
+  margin: 0;
 
   color: var(--color-text-light);
 }
@@ -844,6 +851,7 @@ ABOUT US SECTION
   .aboutus__item:hover{
     cursor: pointer;
     height: 225px;
+    padding-inline: 24px;
   }
   
 }
