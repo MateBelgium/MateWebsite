@@ -1,9 +1,5 @@
 @keyframes backgroundParallax {
     0% {
-        background-position: 0% 0%;
-    }
-  
-    1% {
         background-position: 100% 0%;
     }
   
@@ -18,18 +14,15 @@
 
   animation-name: backgroundParallax;
   animation-range: 0% 200%;
-  animation-fill-mode: both;
+  animation-fill-mode: none;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+  background-position: center center;
 
 }
 
 @keyframes slideRight {
     0% {
-        opacity: 0;
-        transform: translate(0, 0);
-    }
-  
-    1% {
         opacity: 1;
         transform: translate(-25%, 0);
     }
@@ -43,16 +36,15 @@
 .slideRight {
     animation: slideRight 0.2s ease-out both;
     animation-timeline: view(block);
-    animation-range: entry-crossing 0% contain 100%;
+    animation-range: 0% 100%;
+    animation-fill-mode: none;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    transform: translate(0, 0);
 }
   
 
 @keyframes slideFromTop {
   0% {
-      transform: translate(0, 0);
-  }
-
-  1% {
       transform: translate(0, -10%);
   }
 
@@ -67,16 +59,13 @@
 
   animation-name: slideFromTop;
   animation-range: 0% 50%;
-  animation-fill-mode: both;
+  animation-fill-mode: none;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  transform: translate(0, 0);
 }
 
 @keyframes slideFromBottom {
   0% {
-      transform: translate(0, 0);
-  }
-
-  1% {
       transform: translate(0, 10%);
   }
 
@@ -91,8 +80,10 @@
 
   animation-name: slideFromBottom;
   animation-range: 0% 50%;
-  animation-fill-mode: both;
+  animation-fill-mode: noe;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+  transform: translate(0, 0);
 }
 
 @media all and (min-width: 1024px) {
@@ -109,11 +100,12 @@
       animation-timeline: --body;
 
       animation-name: appearNumber;
-      animation-range: 20% 180%;
-      animation-fill-mode: both;
+      animation-range: 0% 180%;
+      animation-fill-mode: none;
       animation-duration: 1ms; /* Firefox requires this to apply the animation */
 
-      position: absolute
+      position: absolute;
+      left: -480px;
 
   }
 

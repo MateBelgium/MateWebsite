@@ -30,7 +30,7 @@
     animation-fill-mode: none;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
 
-    width: calc(200*4px + 300px + 100vw);
+    width: max-content;
     transform: translateX(-30vh);
 
 }
