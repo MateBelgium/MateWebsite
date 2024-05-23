@@ -1,6 +1,6 @@
 .shop__container {
 
-    padding-block-start: 120px;
+    padding-block-start: 48px;
 
 }
 
@@ -8,23 +8,30 @@
     
     display: flex;
     flex-direction: column;
+    overflow: clip;
+
+    gap: 12px;
 
 }
 
 .shop__list {
-    
+
     list-style: none;
     
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: row;    
     gap: 12px;
+
+    position: relative;
 
     animation-timeline: view(block);
     animation-name: slideTest;
     animation-range: -10% 200%;
     animation-fill-mode: both;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+    width: calc(200*4px + 300px + 100vw);
+
 
 }
 
@@ -96,11 +103,11 @@
     }
 
     1% {
-        transform: translate(-55%, 0%);
+        transform: translate(0, 0%);
     }
 
     100% {
-        transform: translate(0, 0%);
+        transform: translate(-45%, 0);
     }
 }
 
@@ -110,11 +117,11 @@
     }
 
     1% {
-        transform: translate(0, 0%);
+        transform: translate(-45%, 0);
     }
 
     100% {
-        transform: translate(-55%, 0);
+        transform: translate(0, 0);
     }
 }
 
@@ -147,6 +154,8 @@
         flex-direction: row;
 
         gap: 24px;
+
+        overflow: visible;
         
     }
 
@@ -167,6 +176,8 @@
         animation-range: -10% 200%;
         animation-fill-mode: both;
         animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+        width: 100%;
 
     }
 
@@ -237,7 +248,7 @@
         }
 
         1% {
-            transform: translate(0, -60%);
+            transform: translate(0, -55%);
         }
 
         100% {
@@ -255,7 +266,7 @@
         }
 
         100% {
-            transform: translate(0, -60%);
+            transform: translate(0, -55%);
         }
     }
 

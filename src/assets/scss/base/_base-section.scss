@@ -9,10 +9,18 @@
 
 }
 
+
 @media all and (min-width: 745px){
-    .s-section {
-        padding: 30px 24px;
-    }
+.s-section {
+    padding: 30px 24px;
+}
+}
+
+.s-firstSection {
+
+    padding-block-start: 120px;
+
+
 }
 
 .s-section__content {
