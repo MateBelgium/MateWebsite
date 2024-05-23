@@ -3,17 +3,16 @@
 =================================== */
 
 :root {
-  --fontstack-main: "DMSans", "Helvetica Neue", "Helvetica", system-ui,
+  --fontstack-main: "DMSans", "Arial", system-ui,
   sans-serif;
-  --fontstack-alt: "Panchang", "Helvetica Neue", "Helvetica", system-ui,
-  sans-serif;
+  --fontstack-alt: "Panchang", "Arial", system-ui, sans-serif;
 }
 
 
 
 h1 {
 
-  font-family: "Panchang";
+  font-family: var(--fontstack-alt);
   font-weight: 700;
   font-size: 42px;
 
@@ -23,7 +22,7 @@ h1 {
 
 h2 {
 
-  font-family: "DMSans";
+  font-family: var(--fontstack-main);
   color: var(--color-text-light);
   font-weight: 700;
   font-size: 24px;
