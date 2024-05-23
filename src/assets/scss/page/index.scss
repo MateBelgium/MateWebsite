@@ -311,6 +311,15 @@ CARD SECTION
   height: fit-content;
 }
 
+.cardsection:hover{
+  .cardsection__hint{
+    display: none;
+  }
+  .cardsection__text{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 .reverse{
   margin-top: 0;
@@ -349,6 +358,11 @@ CARD SECTION
   max-width: 850px;
 
   margin: 0;
+
+  transform: scale(0);
+  opacity: 0;
+
+  transition: 0.5s ease-in-out;
 }
 
 .cardsection__img{
@@ -404,6 +418,7 @@ CARD SECTION
     display: grid;
 
     height: 100%;
+
   }
 
   .cardsection:hover{
@@ -435,6 +450,11 @@ CARD SECTION
     max-height: 475px;
   }
 
+  .cardsection__text{
+    transform: scale(1);
+    opacity: 1;
+  }
+  
   .reverse{
     display: grid;
     align-self: flex-start;
