@@ -323,9 +323,21 @@ CARD SECTION
   padding-inline: 12px;
 }
 
+.cardsection__head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .cardsection__title{
   font-size: 3vh;
   margin-bottom: 12px;
+}
+
+.cardsection__hint{
+  margin-top: 0;
+  font-style: italic;
 }
 
 .cardsection__text{
@@ -404,6 +416,10 @@ CARD SECTION
     grid-area: 1 / 1 / 1 / 1;
     margin-bottom: 36px;
     font-size: 6.5vh;
+  }
+
+  .cardsection__hint{
+    display: none;
   }
 
   .cardsection__content{
