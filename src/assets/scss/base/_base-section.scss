@@ -186,7 +186,7 @@
 
 .s-section__title {
 
-    font-family: "Panchang";
+    font-family: var(--fontstack-alt);
     font-weight: 700;
     font-size: 42px;
 
@@ -204,7 +204,7 @@
 
     .s-section__title {
 
-        font-family: "Panchang";
+        font-family: var(--fontstack-alt);
         font-weight: 700;
         font-size: 25vh;
         text-align: left;
