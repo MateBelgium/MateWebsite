@@ -41,10 +41,10 @@
 
 }
 
-.shop__card {
+.shop__item {
 
     width: 200px;
-    height: 200px;
+    height: 300px;
 
     background-color: var(--color-green-300);
     background-size: 100%;
@@ -60,7 +60,7 @@
 
 }
 
-.shop__title {
+.shopItem__title {
 
     color: var(--color-grey-100);
     font-family: 'Panchang';
@@ -75,7 +75,13 @@
 
 }
 
-.shop__sizes {
+.shopItem__more {
+        
+    display: none;
+
+}
+
+.shopItem__sizes {
 
     list-style: none;
 
@@ -187,10 +193,13 @@
 
     }
 
-    .shop__card {
+    .shop__item {
 
         width: 408px;
         height: 408px;
+
+        position: relative;
+        overflow: hidden;
 
         background-color: var(--color-green-300);
         background-size: 100%;
@@ -200,13 +209,14 @@
 
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-between;
 
         transition: all 0.2s ease;
 
     }
 
-    .shop__title {
+    .shopItem__title {
 
         color: var(--color-grey-100);
         font-family: 'Panchang';
@@ -218,28 +228,51 @@
         margin: 0;
         background-color: var(--color-green-300);
 
+        width: 100%;
+        
     }
+    
+    .shopItem__more {
+        
+        width: 42px;
+        height: 42px;
+        
+        padding: 12px;
+        
+        background-color: var(--color-green-300);
+        border: 1px solid var(--color-grey-100);
 
-    .shop__sizes {
+        display: block;
+        position: absolute;
+        bottom: -5%;
+        z-index: 0;
 
+        transition: all 0.2s ease;
+        
+    }
+    
+    .shopItem__sizes {
+        
         list-style: none;
-
+        
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-
+        
+        width: 100%;
         gap: 32px;
-
+        
         padding: 0;
         padding-block: 12px;
         margin: 0;
         background-color: var(--color-green-300);
-
+        
         color: black;
-
+        
         bottom: 0;
-
+        z-index: 1;
+        
     }
 
     @keyframes slideTest {
@@ -281,6 +314,12 @@
         cursor: pointer;
         background-size: 105%;
         filter: brightness(1.3);
+
+    }
+
+    .middle:hover .shopItem__more {
+
+        bottom: 20%;
 
     }
   
