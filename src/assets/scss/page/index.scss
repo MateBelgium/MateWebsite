@@ -293,18 +293,24 @@ CARD SECTION
 */
 
 .cardsection{
-  margin-block-start: 70px;
-
-  overflow: visible;
-
-  margin-bottom: 42px;
+  overflow: clip;
 
   display: flex;
   flex-direction: column;
 
+  margin: 70px -12px 42px -12px;
+
+  background-color: var(--color-green-400);
+
+  height: 250px;
+
+  transition: 0.5s ease-in-out;
 }
 
-.cardsection :nth-child(2){order: -1;}
+.cardsection:hover{
+  height: fit-content;
+}
+
 
 .reverse{
   margin-top: 0;
@@ -313,7 +319,8 @@ CARD SECTION
 }
 
 .cardsection__content{
-  margin-top: 12px;
+  margin-block: 12px;
+  padding-inline: 12px;
 }
 
 .cardsection__title{
@@ -322,8 +329,8 @@ CARD SECTION
 }
 
 .cardsection__text{
-  font-weight: normal;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 2.5vh;
 
   color: var(--color-text-light);
 
@@ -342,6 +349,8 @@ CARD SECTION
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  order: -1;
 }
 
 .reverse .cardsection__img{
@@ -351,23 +360,27 @@ CARD SECTION
 
 @media all and (min-width: 745px){
   .cardsection{
-    flex-direction: row;
-    gap: 36px;
-    margin-bottom: 60px;
+    gap: 18px;
+    margin: 65px -24px 0px -24px;
+    height: 270px;
+  }
+  .cardsection:hover{
+    max-height: fit-content;
   }
   .cardsection__content{
     margin-top: 0;
   }
   .cardsection__img{
-    max-width: 300px;
-    max-height: 400px;
+    max-width: 100%;
+    max-height: 250px;
   }
   .cardsection__text{
     font-size: 16px;
   }
   .reverse{
-    flex-direction: row-reverse;
+    margin: 0px -24px 65px -24px;
   }
+
 }
 
 @media all and (min-width: 1024px) {
@@ -377,7 +390,14 @@ CARD SECTION
     align-self: flex-end;
 
     display: grid;
+
+    height: 100%;
   }
+
+  .cardsection:hover{
+    height: 100%;
+  }
+
   .cardsection :nth-child(3){order: 3;}
 
   .cardsection__title{
@@ -388,14 +408,15 @@ CARD SECTION
 
   .cardsection__content{
     margin-top: 5vh;
-    grid-area: 1 / 1 / 4 / 1;
+    padding-inline: 42px;
+    grid-area: 3 / 1 / 7 / 1;
   }
   .cardsection__img{
-    grid-area: 4 / 1 / 8 / 1;
+    grid-area: 6 / 1 / 9 / 1;
 
-    width: 850px;
-    max-width: none;
-    max-height: none;
+    width: 940px;
+    max-width: 100%;
+    max-height: 475px;
   }
 
   .reverse{
@@ -407,11 +428,11 @@ CARD SECTION
     grid-area: 5 / 1 / 5 / 1;
   }
   .reverse .cardsection__content{
-    grid-area: 5 / 1 / 8 / 1;
+    grid-area: 4 / 1 / 7 / 1;
     margin-top: 0;
   }
   .reverse .cardsection__img{
-    grid-area: 1 / 1 / 5 / 1;
+    grid-area: 1 / 1 / 4 / 1;
   }
 
 }
