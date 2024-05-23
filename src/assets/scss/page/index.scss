@@ -15,15 +15,15 @@ LANDING PAGE
 }
 
 .landPage__logoHidden{
-  display: block;
+  display: block; //make sure logo is displayed for mobile/tablet devices
 
-  width: 215px; //
+  width: 215px; //set a fixed width for logo (mobile)
 
-  z-index: 2;  
+  z-index: 2;  //make sure logo is above image
 }
 
 .landPage__menu{
-  list-style: none;  
+  list-style: none; 
 
   font-family: "Panchang";
   font-weight: 600;
