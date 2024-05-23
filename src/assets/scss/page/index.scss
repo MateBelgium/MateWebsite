@@ -722,7 +722,7 @@ ABOUT US SECTION
 
   text-align: center;
 
-  padding-block-start: 15px;
+  padding-block-start: 25px;
   padding-block-end: 25px;
 }
 
@@ -797,4 +797,148 @@ ABOUT US SECTION
     margin-top: -20px;
     grid-area: 5 / 2 / 5 / 3;
   }
+}
+
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+FOOTER SECTION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+.footer__list{
+  padding: 0;
+  margin-top: 40px;
+  list-style: none;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer__item__list{
+  list-style: none;
+  padding: 0;
+}
+
+.footer__item__title{
+  font-family: "Panchang";
+  font-size: 4.5vh;
+  font-weight: bold;
+  color: var(--color-accent);
+}
+
+.footer__item__info{
+  font-family: "DMSans";
+  font-size: 3.5vh;
+  font-weight: normal;
+  color: var(--color-text-grey-500);
+}
+
+.footer__item:nth-child(even){
+  text-align: right;
+}
+
+@media all and (min-width:745px){
+  .footersection{
+    margin: 0 100px;
+  }
+}
+
+@media all and (min-width:1024px){
+
+  .footer__title{
+    display: none;
+  }
+
+  .footersection{
+    width: max-content;
+    margin-left: -100px;
+  }
+
+  .footer__list{
+    flex-direction: row;
+    gap: 30px;
+    grid-area:  1 / 1 / 8 / 4;
+  }
+
+  .footer__item{
+    text-align: right;
+    margin-top: 50px;
+    //grid-area: 1 / 2 / 1 / 3;
+  }
+
+  .footer__item:nth-child(even){
+    align-self: flex-end;
+    margin-top: 0;
+    //grid-area: 1 / 5 / 1 / 6;
+  }
+
+  .footer__item__title{
+    font-size: 8vh;
+  }
+  
+  .footer__item__info{
+    font-size: 3.5vh;
+  }
+  
+
+}
+
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+END SECTION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+.endsection{
+  background-color: var(--color-background-dark);
+
+  border: 1px var(--color-text-light);
+  border-top-style: solid;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100px;
+}
+
+.endsection__text{
+  order: 1;
+  font-family: "DMSans";
+  font-size: 1.2vh;
+  font-weight: normal;
+  color: var(--color-text-grey-500);
+
+  max-width: 170px;
+
+  text-align: center;
+}
+
+
+@media all and (min-width:745px){
+  .endsection__text{
+    max-width: 500px;
+  }
+
+}
+
+@media all and (min-width:1024px){
+
+  .endsection{
+    flex-direction: column;
+
+    border: 1px var(--color-text-light);
+    border-left-style: solid;
+    border-top-style: none;
+    height: 100%;
+    min-width: 130px;
+  }
+
+  .endsection__text{
+    writing-mode: vertical-lr;
+    align-self: center;
+  }
+
 }
