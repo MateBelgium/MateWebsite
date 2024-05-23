@@ -675,3 +675,126 @@ SHOP SECTION
   }
   
 }
+
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ABOUT US SECTION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+.aboutus__text{
+  margin-bottom: 70px;
+  font-weight: normal;
+  font-size: 18px;
+
+  color: var(--color-text-light);
+}
+
+.aboutus__list{
+  padding: 0;
+  list-style: none;
+}
+
+.aboutus__item{
+  height: 100px;
+
+  overflow: clip;
+
+  border: 1px var(--color-grey-100);
+  border-top-style: solid;
+
+  transition: 0.5s ease-in-out;
+}
+
+.aboutus__item:nth-child(3){
+  border-bottom-style: solid;
+}
+
+.aboutus__item:hover{
+  cursor: pointer;
+  height: 275px;
+}
+
+.aboutus__value__title{
+  font-family: "Panchang";
+  font-weight: bold;
+  font-size: 5vh;
+
+  text-align: center;
+
+  padding-block-start: 15px;
+  padding-block-end: 25px;
+}
+
+.aboutus__value__text{
+  font-weight: normal;
+  font-size: 18px;
+
+  color: var(--color-text-light);
+}
+
+.aboutus__link{
+  color: var(--color-text);
+  font-weight: bold;
+  font-size: 30px;
+  align-self: center;
+  margin: 0;
+
+  text-align: center;
+
+  margin: 50px 0;
+}
+
+@media all and (min-width: 745px){
+  .aboutus__value__title{
+    padding-block-start: 10px;
+    padding-block-end: 25px;
+  }
+
+  .aboutus__item:hover{
+    cursor: pointer;
+    height: 225px;
+  }
+  
+}
+
+@media all and (min-width: 1024px){
+
+  .aboutus{
+    width: max-content;
+  }
+
+  .aboutus__title{
+    grid-area: 1 / 1 / 3 / 3;
+  }  
+  .aboutus__text{
+    grid-area: 4 / 1 / 6 / 2;
+    margin: 0;
+    max-width: 1300px;
+  }
+  .aboutus__list{
+    grid-area: 1 / 3 / 8 / 4;
+    max-width: 1080px;
+    transform: rotate(-90deg);
+  }
+  .aboutus__item{
+    height: 180px;
+  }
+  .aboutus__item:hover{
+    height: 800px;
+  }
+  .aboutus__value__title{
+    margin-top: 45px;
+  }
+  .aboutus__value__text{
+    transform: rotate(90deg);
+    width: 50%;
+    margin-top: 275px;
+    margin-left: 275px;
+  }
+  .aboutus__link{
+    margin-left: -750px;
+    margin-top: -20px;
+    grid-area: 5 / 2 / 5 / 3;
+  }
+}
