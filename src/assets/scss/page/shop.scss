@@ -27,11 +27,11 @@
     animation-timeline: view(block);
     animation-name: slideTest;
     animation-range: -10% 200%;
-    animation-fill-mode: both;
+    animation-fill-mode: none;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
 
     width: calc(200*4px + 300px + 100vw);
-
+    transform: translateX(-30vh);
 
 }
 
@@ -164,6 +164,34 @@
         overflow: visible;
         
     }
+    
+    @keyframes slideTest {
+        0% {
+            transform: translate(0, -33%);
+        }
+        
+        1% {
+            transform: translate(0, -55%);
+        }
+        
+        100% {
+            transform: translate(0, 0%);
+        }
+    }
+
+    @keyframes slideTestInvert {
+        0% {
+            transform: translate(0, -33%);
+        }
+
+        1% {
+            transform: translate(0, 0%);
+        }
+
+        100% {
+            transform: translate(0, -55%);
+        }
+    }
 
     .shop__list {
 
@@ -180,10 +208,11 @@
         animation-timeline: view(inline);
         animation-name: slideTest;
         animation-range: -10% 200%;
-        animation-fill-mode: both;
+        animation-fill-mode: none;
         animation-duration: 1ms; /* Firefox requires this to apply the animation */
 
         width: 100%;
+        transform: translate(0, -33%);
 
     }
 
@@ -275,33 +304,6 @@
         
     }
 
-    @keyframes slideTest {
-        0% {
-            transform: translate(0, -33%);
-        }
-
-        1% {
-            transform: translate(0, -55%);
-        }
-
-        100% {
-            transform: translate(0, 0%);
-        }
-    }
-
-    @keyframes slideTestInvert {
-        0% {
-            transform: translate(0, -33%);
-        }
-
-        1% {
-            transform: translate(0, 0%);
-        }
-
-        100% {
-            transform: translate(0, -55%);
-        }
-    }
 
     .middle {
 
