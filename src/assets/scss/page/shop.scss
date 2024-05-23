@@ -8,6 +8,9 @@
     
     display: flex;
     flex-direction: column;
+    overflow: clip;
+
+    gap: 12px;
 
 }
 
@@ -23,9 +26,13 @@
 
     animation-timeline: view(block);
     animation-name: slideTest;
-    animation-range: cover;
+    animation-range: -10% 200%;
     animation-fill-mode: both;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+    width: calc(200*4px + 300px + 100vw);
+
+
 }
 
 .invert {
@@ -36,7 +43,7 @@
 
 .shop__card {
 
-    width: 500px;
+    width: 200px;
     height: 200px;
 
     background-color: var(--color-green-300);
@@ -96,11 +103,11 @@
     }
 
     1% {
-        transform: translate(-55%, 0%);
+        transform: translate(0, 0%);
     }
 
     100% {
-        transform: translate(0, 0%);
+        transform: translate(-45%, 0);
     }
 }
 
@@ -110,11 +117,11 @@
     }
 
     1% {
-        transform: translate(0, 0%);
+        transform: translate(-45%, 0);
     }
 
     100% {
-        transform: translate(-55%, 0);
+        transform: translate(0, 0);
     }
 }
 
@@ -147,6 +154,8 @@
         flex-direction: row;
 
         gap: 24px;
+
+        overflow: visible;
         
     }
 
@@ -167,6 +176,8 @@
         animation-range: -10% 200%;
         animation-fill-mode: both;
         animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+        width: 100%;
 
     }
 
