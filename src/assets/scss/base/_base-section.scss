@@ -172,10 +172,16 @@
 
     .number--small {
 
-        margin-inline-end: -560px;
+        width: 80vh;
 
     }
     
+    .number--large {
+
+        width: 160vh;
+
+    }
+
 }
 
 .s-section__title {

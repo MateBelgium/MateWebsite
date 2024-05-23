@@ -31,7 +31,7 @@
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
 
     width: max-content;
-    transform: translateX(-30vh);
+    align-self: center;
 
 }
 
@@ -105,29 +105,21 @@
 
 @keyframes slideTest {
     0% {
-        transform: translateX(50vw);
-    }
-
-    1% {
-        transform: translate(0, 0%);
+        transform: translate(calc(25% + 12px), 0%);
     }
 
     100% {
-        transform: translate(calc(-50% + 12px), 0);
+        transform: translate(calc(-25% + 12px), 0);
     }
 }
 
 @keyframes slideTestInvert {
     0% {
-        transform: translateX(50vw);
-    }
-
-    1% {
-        transform: translate(calc(-50% + 12px), 0);
+        transform: translate(calc(-25% + 12px), 0);
     }
 
     100% {
-        transform: translate(0, 0);
+        transform: translate(calc(25% + 12px), 0%);
     }
 }
 
