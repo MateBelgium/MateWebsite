@@ -396,14 +396,6 @@ LEARN CARDS
 
 }
 
-
-@media all and (min-width: 745px){
-  .learnmore{
-    margin: 0 -24px -30px -24px;
-  }
-  
-}
-
 @media all and (min-width: 1024px) {
 
   .learn__card {
@@ -476,7 +468,7 @@ LEARN MORE
 
 .learnmore{
   height: 200px;
-  margin: 0 -12px -30px -12px;
+  margin: 60px -12px 30px -12px;
 
   background-image: url(../img/learnMore2.JPG);
   background-size: cover;
@@ -520,7 +512,6 @@ LEARN MORE
   
   width: fit-content;
 }
-
 
 @media all and (min-width: 745px){
   .learnmore{
