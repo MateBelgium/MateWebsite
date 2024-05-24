@@ -319,7 +319,7 @@ CARD SECTION
 
 /*
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-LEARN MORE
+LEARN CARDS
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
 
@@ -464,6 +464,108 @@ LEARN MORE
   
     overflow: visible;
   
+  }
+
+}
+
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+LEARN MORE
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+.learnmore{
+  height: 200px;
+  margin: 0 -12px -30px -12px;
+
+  background-image: url(../img/learnMore2.JPG);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.learnmore__button{
+  width: 150px;
+  height: 50px;
+
+  position: absolute;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+
+  background-color: var(--color-background-dark);
+  color: var(--color-text-light);
+
+  border-radius: 100px;
+}
+
+.learnmore__button img{
+  max-width: 25px;
+}
+
+.learnmore__button p{
+  font-family: "DMSans";
+  font-weight: bold;
+  font-size: 12px;
+  
+  width: fit-content;
+}
+
+
+@media all and (min-width: 745px){
+  .learnmore{
+    margin: 0 -24px -30px -24px;
+  }
+  
+}
+
+@media all and (min-width: 1024px) {
+
+  .learnmore{
+    min-width: 635px;
+    height: auto;
+
+    margin: 0 120px;
+  }
+
+  .learnmore__button{
+    width: 200px;
+    height: 75px;
+  
+    position: absolute;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+  
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+  
+    border-radius: 100px;
+  }
+
+  .learnmore__button img{
+    max-width: 35px;
+  }
+  
+  .learnmore__button p{
+    font-family: "DMSans";
+    font-weight: bold;
+    font-size: 16px;
+    
+    width: fit-content;
   }
 
 }
