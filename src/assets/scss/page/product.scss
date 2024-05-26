@@ -66,18 +66,44 @@
 
 }
 
-.product__img {
+.thumbnail__list-big {
 
     width: 552px;
     height: 45vh;
     max-height: 100%;
 
-    background-image: url(../../assets/img/ardennesQuality.JPG);
-    background-size: cover;
+    position: relative;
 
 }
 
-.product__thumbnails {
+.thumbnail__input {
+
+    display: none;
+
+}
+
+.thumbnail__big {
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: 1;
+
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.thumbnail__input:checked + .thumbnail__big {
+
+    z-index: 2;
+
+} 
+
+.thumbnail__list-small {
+
+    height: 120px;
 
     list-style: none;
 
@@ -92,10 +118,30 @@
 
 }
 
-.product__thumbnail {
+.thumbnail__label {
 
+    width: 100%;
     height: 100%;
-    width: 120px;
+
+    cursor: pointer;
+    
+}
+
+.thumbnail__small {
+    
+    width: 100%;
+    height: 100%;
+    background-size: 150%;
+    background-position: center center;
+    
+    transition: all 0.2s ease;
+
+}
+
+.thumbnail__label:hover .thumbnail__small {
+
+    opacity: 0.6;
+    background-size: 175%;
 
 }
 
