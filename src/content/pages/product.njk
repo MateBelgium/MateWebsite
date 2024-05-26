@@ -1,0 +1,117 @@
+---
+permalink: /product.html
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+    <div class="product__container">
+        <div class="product__content">
+            <div class="product__left">
+                <p class="product__url">
+                    <a href="/shop.html" class="url__link">shop</a>
+                    /
+                    <a href="/shop.html?type=hoodie" class="url__link">hoodie</a>
+                </p>
+                <div class="thumbnail__list-big">
+                    <input class="thumbnail__input" name="thumbnail" type="radio" id="a" checked>
+                        <div class="thumbnail__big" style="background-image: url(../../assets/img/ardennesQuality.JPG)"></div>
+                    <input class="thumbnail__input" name="thumbnail" type="radio" id="b">
+                        <div class="thumbnail__big" style="background-image: url(../../assets/img/ardennesMountains.JPG)"></div>
+                    <input class="thumbnail__input" name="thumbnail" type="radio" id="c">
+                        <div class="thumbnail__big" style="background-image: url(../../assets/img/landPageImg2.JPG)"></div>
+                </div>
+                <div class="thumbnail__list-small">
+                    <label class="thumbnail__label" for="a">
+                        <div class="thumbnail__small" style="background-image: url(../../assets/img/ardennesQuality.JPG)"></div>
+                    </label>
+                    <label class="thumbnail__label" for="b">
+                        <div class="thumbnail__small" style="background-image: url(../../assets/img/ardennesMountains.JPG)"></div>
+                    </label>
+                    <label class="thumbnail__label" for="c">
+                        <div class="thumbnail__small" style="background-image: url(../../assets/img/landPageImg2.JPG)"></div>
+                    </label>
+                    </label>
+                </div>
+
+                <p class="product__description">
+                    Nullam congue leo ut libero aliquam commodo. Phasellus sit amet neque non eros hendrerit faucibus non malesuada erat.
+                </p>
+                <a href="" class="product__sizingCharts">
+                    sizing chart
+                </a>
+            </div>
+            <div class="product__right">
+                <h2 class="product__name">Hoodie</h2>
+                <form action="get" class="product__form">
+                    <ul class="product__sizes">
+                        <li class="product__size">
+                            <input type="radio" id="XS" name="size" value="XS" class="size__input">
+                            <label for="XS" class="size__label"><p>XS</p></label>
+                        </li>
+                        <li class="product__size">
+                            <input type="radio" id="S" name="size" value="S" class="size__input" disabled>
+                            <label for="S" class="size__label"><p>S</p></label>
+                        </li>
+                        <li class="product__size">
+                            <input type="radio" id="M" name="size" value="M" class="size__input" checked>
+                            <label for="M" class="size__label"><p>M</p></label>
+                        </li>
+                        <li class="product__size">
+                            <input type="radio" id="L" name="size" value="L" class="size__input" disabled>
+                            <label for="L" class="size__label"><p>L</p></label>
+                        </li>
+                        <li class="product__size">
+                            <input type="radio" id="XL" name="size" value="XL" class="size__input" disabled>
+                            <label for="XL" class="size__label"><p>XL</p></label>
+                        </li>
+                        <li class="product__size">
+                            <input type="radio" id="XXL" name="size" value="XXL" class="size__input">
+                            <label for="XXL" class="size__label"><p>XXL</p></label>
+                        </li>
+                    </ul>
+                    <ul class="product__colors">
+                        <li class="product__color">
+                            <input type="radio" id="color1" name="color" value="" class="color__input" checked>
+                            <label for="color1" class="color__label"><div style="background-color: #ff0000"></div></label>
+                        </li>
+                        <li class="product__color">
+                            <input type="radio" id="color2" name="color" value="" class="color__input">
+                            <label for="color2" class="color__label"><div style="background-color: #ff0000"></div></label>
+                        </li>
+                        <li class="product__color">
+                            <input type="radio" id="color3" name="color" value="" class="color__input">
+                            <label for="color3" class="color__label"><div style="background-color: #ff0000"></div></label>
+                        </li>
+                        <li class="product__color">
+                            <input type="radio" id="L" name="color" value="" class="color__input" disabled>
+                            <label for="L" class="color__label"><div style="background-color: #ff0000"></div></label>
+                        </li>
+                        <li class="product__color">
+                            <input type="radio" id="color4" name="color" value="" class="color__input">
+                            <label for="color4" class="color__label"><div style="background-color: #ff0000"></div></label>
+                        </li>
+                    </ul>
+                    <div class="product__quantity">
+                            <label class="quantity__label" for="quantity_down"><p>-</p></label>
+                        <input class="quantity__button" type="button" onclick="this.nextElementSibling.stepDown()" id="quantity_down">
+                            <input class="quantity__number" type="number" id="quantity" name="quantity" min="1" max="10" class="quantity__input" value="1"/>
+                        <input class="quantity__button" type="button" onclick="this.previousElementSibling.stepUp()" id="quantity_up">
+                            <label class="quantity__label" for="quantity_up"><p>+</p></label>
+                    </div>
+                    <div class="product__total">
+                        <p class="total">69.99€</p>
+                        <p class="shipping">+ 9.99$ shipping</p>
+                    </div>
+                    <input type="submit" id="addToCart" class="addToCart__input">
+                    <label for="addToCart" class="addToCart__label"> add to cart</label>
+                </form>
+                <p class="product__details">
+                    100% Organic Cotton 240g/m2. Lose fit. Pre-washed. Our garments are preferred to be washed with Dash. It features a large print on the front designed by the artist Mate.
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

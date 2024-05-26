@@ -1,23 +1,43 @@
 @keyframes backgroundParallax {
-    0% {
-        background-position: 100% 0%;
-    }
-  
-    100% {
-        background-position: 0% 0%;
-    }
+  0% {
+      background-position: 0% 100%;
   }
+
+  100% {
+      background-position: 0% 0%;
+  }
+}
 
 .anim__backgroundimg {
 
-  animation-timeline: view(inline);
+animation-timeline: view(block);
 
-  animation-name: backgroundParallax;
-  animation-range: 0% 200%;
-  animation-fill-mode: none;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+animation-name: backgroundParallax;
+animation-range: 0% 200%;
+animation-fill-mode: none;
+animation-duration: 1ms; /* Firefox requires this to apply the animation */
 
-  background-position: center center;
+background-position: center center;
+
+}
+
+@media all and (min-width: 1024px) {
+
+  @keyframes backgroundParallax {
+      0% {
+          background-position: 100% 0%;
+      }
+    
+      100% {
+          background-position: 0% 0%;
+      }
+    }
+
+  .anim__backgroundimg {
+
+    animation-timeline: view(inline);
+
+  }
 
 }
 
@@ -84,6 +104,39 @@
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
 
   transform: translate(0, 0);
+}
+
+.s-section__number {
+
+  view-timeline: --body block;
+  position: relative;
+
+  overflow: visible;
+  
+}
+
+.s-section__number p {
+  
+  animation-timeline: --body;
+
+  animation-name: appearNumber;
+  animation-range: 0% 100%;
+  animation-fill-mode: none;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+  transform: translateY(10px);
+  z-index: 0;
+
+}
+
+@keyframes appearNumber{
+  from {
+      transform: translateY(20px);
+  }
+
+  to {
+      transform: translateY(-30px);
+  }
 }
 
 @media all and (min-width: 1024px) {

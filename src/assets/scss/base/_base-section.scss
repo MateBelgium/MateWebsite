@@ -28,6 +28,7 @@
 .s-section__content {
 
     overflow: hidden;
+    z-index: 1;
 
 }
 
@@ -174,7 +175,7 @@
 
     .number--small {
 
-        width: 80vh;
+        width: 120vh;
 
     }
     
@@ -188,7 +189,7 @@
 
 .s-section__title {
 
-    font-family: "Panchang";
+    font-family: var(--fontstack-alt);
     font-weight: 700;
     font-size: 5vh;
 
@@ -214,7 +215,7 @@
 
     .s-section__title {
 
-        font-family: "Panchang";
+        font-family: var(--fontstack-alt);
         font-weight: 700;
         font-size: 25vh;
         text-align: left;

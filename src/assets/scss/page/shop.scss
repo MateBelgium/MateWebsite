@@ -63,7 +63,7 @@
 .shopItem__title {
 
     color: var(--color-grey-100);
-    font-family: 'Panchang';
+    font-family: var(--fontstack-alt);
     font-weight: 700;
     font-size: 2rem;
     text-align: center;
@@ -143,6 +143,7 @@
     .shop__container {
 
         padding-inline-end: 240px;
+        z-index: 2;
         
     }
 
@@ -240,7 +241,7 @@
     .shopItem__title {
 
         color: var(--color-grey-100);
-        font-family: 'Panchang';
+        font-family: var(--fontstack-alt);
         font-weight: 700;
         font-size: 2rem;
         text-align: center;
