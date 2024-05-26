@@ -1,0 +1,61 @@
+---
+permalink: /product.html
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+    <div class="product__container">
+        <div class="product__content">
+            <div class="product__left">
+                <p class="product__url">
+                    C:\Users\elann\Mon Drive\Mate\Site\MateWebsite\src
+                </p>
+                <div class="product__img"></div>
+                <ul class="product__thumbnails">
+                    <li class="product__thumbnail"><img src="../../assets/img/ardennesQuality.JPG" alt="" class="o-fluidimg"></li>
+                    <li class="product__thumbnail"><img src="../../assets/img/ardennesQuality.JPG" alt="" class="o-fluidimg"></li>
+                    <li class="product__thumbnail"><img src="../../assets/img/ardennesQuality.JPG" alt="" class="o-fluidimg"></li>
+                    <li class="product__thumbnail"><img src="../../assets/img/ardennesQuality.JPG" alt="" class="o-fluidimg"></li>
+                </ul>
+                <p class="product__description">
+                    Nullam congue leo ut libero aliquam commodo. Phasellus sit amet neque non eros hendrerit faucibus non malesuada erat.
+                </p>
+                <a href="" class="product__sizingCharts">
+                    sizing chart
+                </a>
+            </div>
+            <div class="product__right">
+                <h2 class="product__name">Hoodie</h2>
+                <ul class="product__sizes">
+                    <li class="product__size">XS</li>
+                    <li class="product__size size__disabled">S</li>
+                    <li class="product__size size__active">M</li>
+                    <li class="product__size size__disabled">L</li>
+                    <li class="product__size size__disabled">XL</li>
+                    <li class="product__size">XXL</li>
+                </ul>
+                <ul class="product__colors">
+                    <li class="product__color" style="background-color: #ff0000"></li>
+                    <li class="product__color color__disabled" style="background-color: #ff0000"></li>
+                    <li class="product__color color__active" style="background-color: #ff0000"></li>
+                    <li class="product__color" style="background-color: #ff0000"></li>
+                </ul>
+                <div class="product__quantity">
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" class="quantity__input"/>
+                </div>
+                <div class="product__total">
+                    <p class="total">69.99€</p>
+                    <p class="shipping">+ 9.99$ shipping</p>
+                </div>
+                <input type="submit" id="addToCart" class="addToCart__input">
+                <label for="addToCart" class="addToCart__label"> add to cart</label>
+                <p class="product__details">
+                    100% Organic Cotton 240g/m2. Lose fit. Pre-washed. Our garments are preferred to be washed with Dash. It features a large print on the front designed by the artist Mate.
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

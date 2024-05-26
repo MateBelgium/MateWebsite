@@ -1,0 +1,245 @@
+.product__container {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.product__content {
+
+    width: 100vw;
+    height: 100%;
+    background-color: var(--color-grey-100);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 60px;
+
+}
+
+@media all and (min-width: 1024px) {
+
+    .product__content {
+
+        flex-direction: row;
+    
+    }
+
+}
+
+.product__left {
+
+    max-width: 552px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 36px;
+
+}
+
+.product__url {
+
+    margin: 0;
+
+    color: var(--color-grey-300);
+
+}
+
+.product__img {
+
+    width: 552px;
+    height: 45vh;
+    max-height: 100%;
+
+    background-image: url(../../assets/img/ardennesQuality.JPG);
+    background-size: cover;
+
+}
+
+.product__thumbnails {
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.product__thumbnail {
+
+    height: 100%;
+    width: 120px;
+
+}
+
+.product__description {
+
+    margin: 0;
+
+    color: var(--color-grey-500);
+
+}
+
+.product__sizingCharts {
+
+    margin: 0;
+
+}
+
+.product__right {
+
+    max-width: 552px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 36px;
+
+}
+
+.product__name {
+
+    font-family: 'Panchang';
+    color: var(--color-green-300);
+
+}
+
+.product__sizes {
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.product__size {
+
+    padding: 12px;
+    width: 48px;
+
+    color: var(--color-white);
+    text-align: center;
+
+}
+
+.size__active {
+
+    background-color: var(--color-green-300);
+
+}
+
+.size__disabled {
+
+    color: var(--color-grey-300);
+
+}
+
+.product__colors {
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.product__color {
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 18px;
+
+} 
+
+.color__active {
+
+    width: 72px;
+
+    border: 1px solid var(--color-white);
+
+}
+
+.product__total {
+
+    padding-top: 24px;
+
+    border-top: 1px solid var(--color-grey-500);
+    
+}
+
+.total {
+    
+    margin: 0;
+    text-align: end;
+    
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--color-white);
+    
+    
+}
+
+.shipping {
+    
+    margin: 0;
+    text-align: end;
+
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-grey-500);    
+
+}
+
+.addToCart__input {
+
+    display: none;
+    
+}
+
+.addToCart__label {
+
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-white);
+    text-align: center;
+    
+    width: 100%;
+    padding-block: 18px;
+
+    background-color: var(--color-green-300);
+    border: 1px solid var(--color-white);
+
+}
+
+.product__details {
+
+    color: var(--color-grey-500);
+
+}
