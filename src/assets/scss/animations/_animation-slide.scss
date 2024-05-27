@@ -74,20 +74,42 @@ background-position: center center;
   }
 }
   
-.slideRightInit{
-  animation: slideRightInit 0.2s ease-out both;
-  animation-timeline: view(inline);
-  animation-range: 0% 100%;
-  animation-fill-mode: none;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
 
+@media all and (min-width:1024px){
+
+  .slideRightInit{
+    animation: slideRightInit 0.2s ease-out both;
+    animation-timeline: view(inline);
+    animation-range: 0% 100%;
+    animation-fill-mode: none;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  
+  }
 }
-.slideRightInit2{
-  animation: slideRightInit 0.2s ease-out both;
-  animation-timeline: view(inline);
-  animation-range: -17% 100%;
-  animation-fill-mode: none;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+@keyframes slideLeftTitle {
+  0% {
+    opacity: 1;
+    transform: translate(-100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(90%, 0);
+  }
+}
+  
+
+@media all and (min-width:1024px){
+
+  .slideLeftTitle{
+    animation: slideLeftTitle 0.2s ease-out both;
+    animation-timeline: view(inline);
+    animation-range: 0% 100%;
+    animation-fill-mode: none;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  
+  }
 
 }
 

@@ -71,7 +71,7 @@ ABOUT US VALUE SECTION
 @media all and (min-width:1024px){
 
     .au__value__section{
-        grid-column-gap: 125px;
+        grid-column-gap:120px ;
     }
 
     .au__value__title-container{
@@ -88,18 +88,19 @@ ABOUT US VALUE SECTION
 
     .au__value__text-container{
         grid-area: 5 / 1 / 5 / 1;
-        max-width: 1200px;
         margin-left: 250px;
     }
-
-    .au__fast{
-        animation-range: 0% 20%;
+    
+    .au__value__text{
+        max-width: 1200px;
+        animation-range: -40% 100%;
     }
 
     .au__value__list-container{
         height: 100%;
         width: auto;
     }
+
     
 }
 
@@ -133,6 +134,35 @@ ABOUT US CONCEPT SECTION
 .au__concept__text{
     color: var(--color-text-light);
     margin-bottom: 0;
+}
+
+@media all and (min-width:1024px){
+    .au__concept__section{
+        width: max-content;
+        grid-column-gap:125px;
+    }
+    .au__concept__title-container{
+        grid-area: 2 / 1 / 4 / 4;
+        display: flex;
+        align-items: center;
+    }
+
+    .au__concept{
+        grid-area: 4 / 1 / 7 / 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .au__concept:nth-child(3){
+        grid-area: 4 / 2 / 5 / 2;
+    }
+    .au__concept__text{
+        max-width: 1200px;
+    }
+    .au__learnmore-container{
+        grid-area: 5 / 3 / 6 / 3;
+        width: 550px;
+    }
 }
 
 /*
@@ -220,7 +250,7 @@ ABOUT US TEAM SECTION
 
 .au__teamMember__image{
     background-image: url(../img/shopsection1.png);
-    background-size: 100%;
+    background-size: cover;
     background-position: 50% 20%;
     height: 235px;
 }
@@ -241,5 +271,43 @@ ABOUT US TEAM SECTION
     .au__teamMember{
         background-color: var(--color-green-400);
         margin-inline: -24px;
+    }
+}
+
+@media all and (min-width:1024px){
+    .au__team__title{
+        grid-area: 2 / 1 / 4 / 1;
+        display: flex;
+        align-items: center;
+    }
+    .au__team__title:nth-child(2){
+        grid-area: 4 / 1 / 6 / 1;
+    }
+    .au__team__text-container{
+        grid-area: 6 / 1 / 7 / 1;
+        max-width: 550px;
+    }
+    .au__team__text{
+        text-align: left;
+    }
+    .au__teamMember{
+        margin-inline: 0px;
+    }
+    .au__teamMember-container{
+        display: flex;
+        align-items: center;
+        margin-inline: 32.5px;
+        margin-bottom: 0;
+    }
+    .au__teamMember-container:last-child{
+        margin-bottom: 0;
+        margin-right: 120px;
+    }
+    .au__teamMember__name{
+        height: 75px;
+        width: 448px;
+    }
+    .au__teamMember__image{
+        height: 500px;
     }
 }
