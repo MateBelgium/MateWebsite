@@ -80,15 +80,8 @@ ABOUT US VALUE SECTION
         align-items: center;
     }
 
-    
-    .au__value__subtitle-container{
-        grid-area: 4 / 1 / 5 / 1;
-    }
-    
-
-    .au__value__text-container{
-        grid-area: 5 / 1 / 5 / 1;
-        margin-left: 250px;
+    .au__value__info{
+        grid-area: 4 / 1 / 6 /1;
     }
     
     .au__value__text{
@@ -306,8 +299,19 @@ ABOUT US TEAM SECTION
     .au__teamMember__name{
         height: 75px;
         width: 448px;
+        background-color: var(--color-text);
+        color: var(--color-text-light);
     }
     .au__teamMember__image{
         height: 500px;
+    }
+
+    .au__teamMember__info{
+        background-color: var(--color-text);
+        color: var(--color-text-light);
+    }
+
+    .au__teamMember__title{
+        color: var(--color-accent);
     }
 }
