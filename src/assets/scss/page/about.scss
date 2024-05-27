@@ -1,0 +1,245 @@
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ABOUT US P.C.R.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+.au__subtitle{
+    font-family: "DMSans";
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.au__text{
+    font-family: "DMSans";
+    font-weight: 300;
+    font-size: 18px;
+    margin: 0;
+}
+
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ABOUT US VALUE SECTION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+
+.au__value__section{
+    padding-top: 60px;
+    overflow: visible;
+    margin-bottom: 50px;
+}
+
+.au__value__title-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.au__value__title{
+    text-align: center;
+    line-height: 5.5vh;
+    width: min-content;
+}
+
+.au__value__subtitle-container{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.au__value__subtitle{
+    color: var(--color-text);
+}
+
+.au__value__text-container{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.au__value__text{
+    color: var(--color-text);
+}
+
+@media all and (min-width:745px){
+    .au__value__title{
+        line-height: 4vh;
+        white-space: nowrap;
+    }
+}
+
+@media all and (min-width:1024px){
+
+    .au__value__section{
+        grid-column-gap: 125px;
+    }
+
+    .au__value__title-container{
+        grid-area: 2 / 1 / 4 / 1;
+        display: flex;
+        align-items: center;
+    }
+
+    
+    .au__value__subtitle-container{
+        grid-area: 4 / 1 / 5 / 1;
+    }
+    
+
+    .au__value__text-container{
+        grid-area: 5 / 1 / 5 / 1;
+        max-width: 1200px;
+        margin-left: 250px;
+    }
+
+    .au__fast{
+        animation-range: 0% 20%;
+    }
+
+    .au__value__list-container{
+        height: 100%;
+        width: auto;
+    }
+    
+}
+
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ABOUT US CONCEPT SECTION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+.au__concept__title{
+    text-align: center;
+}
+
+.au__concept__title-container{
+    margin-top: 20px;
+}
+
+.au__concept__subtitle-container{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.au__concept__subtitle{
+    color: var(--color-text-light);
+}
+
+.au__concept__text-container{
+    margin-bottom: 50px;
+}
+
+.au__concept__text{
+    color: var(--color-text-light);
+    margin-bottom: 0;
+}
+
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ABOUT US LEARN MORE SECTION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+.au__learnmore{
+    margin-bottom: 50px;
+}
+
+.au__learnmore__subtitle-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.au__learnmore__subtitle{
+    color: var(--color-text-light);
+    margin-top: 0;
+}
+
+.au__learnmore__button-container{
+    display: flex;
+    justify-content: center;
+    height: max-content;
+}
+
+.au__learnmore__button{
+    border-radius: 0px;
+    background-color: var(--color-accent);
+    position: unset;
+    color: var(--color-text);
+}
+
+
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ABOUT US TEAM SECTION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+.au__team__title-container{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.au__team__title{
+    line-height: 32px;
+    text-align: center;
+}
+
+.au__team__title:nth-child(2){
+    margin-bottom: 50px;
+}
+
+.au__team__text{
+    text-align: center;
+}
+
+.au__teamMember-container{
+    margin-bottom: 50px;
+}
+
+.au__teamMember-container:last-child{
+    margin-bottom: 50px;
+}
+
+.au__teamMember{
+    background-color: var(--color-green-400);
+    margin-inline: -12px;
+}
+
+.au__teamMember__name{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.au__teamMember__name h1{
+    margin-bottom: 0;
+}
+
+.au__teamMember__image{
+    background-image: url(../img/shopsection1.png);
+    background-size: 100%;
+    background-position: 50% 20%;
+    height: 235px;
+}
+
+.au__teamMember__info{
+    padding-block: 12px;
+    padding-inline: 24px;
+}
+
+.au__teamMember__title p{
+    margin-bottom: 12px;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+@media all and (min-width:745px){
+    .au__teamMember{
+        background-color: var(--color-green-400);
+        margin-inline: -24px;
+    }
+}

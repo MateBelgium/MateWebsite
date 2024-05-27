@@ -61,7 +61,35 @@ background-position: center center;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
     transform: translate(0, 0);
 }
+
+@keyframes slideRightInit {
+  0% {
+      opacity: 1;
+      transform: translate(100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+      transform: translate(0, 0);
+  }
+}
   
+.slideRightInit{
+  animation: slideRightInit 0.2s ease-out both;
+  animation-timeline: view(inline);
+  animation-range: 0% 100%;
+  animation-fill-mode: none;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+}
+.slideRightInit2{
+  animation: slideRightInit 0.2s ease-out both;
+  animation-timeline: view(inline);
+  animation-range: -17% 100%;
+  animation-fill-mode: none;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+}
 
 @keyframes slideFromTop {
   0% {
