@@ -725,18 +725,26 @@ ABOUT US SECTION
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
 
+.aboutus{
+  overflow: visible;
+}
+
 .aboutus__text{
   margin-bottom: 70px;
   font-weight: normal;
   font-size: 18px;
-
+  
   color: var(--color-text-light);
 }
 
+.aboutus__list-container{
+  overflow: visible;
+}
+
 .aboutus__list{
+  margin-inline: -12px;
   padding: 0;
   list-style: none;
-  margin-inline: -12px;
 }
 
 .aboutus__item{
@@ -811,6 +819,7 @@ ABOUT US SECTION
 
   .aboutus{
     width: max-content;
+    grid-column-gap:120px;
   }
 
   .aboutus__title{
