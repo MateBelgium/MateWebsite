@@ -77,9 +77,20 @@
 
 .shopItem__more {
         
-    display: none;
+    max-height: 100%;
+    height: 100%;
+    position: absolute;
 
 }
+
+.shopItem__img {
+
+    max-height: 100%;
+    height: 100%;
+    opacity: 0;
+
+}
+
 
 .shopItem__sizes {
 
@@ -271,6 +282,12 @@
 
         transition: all 0.2s ease;
         
+    }
+
+    .shopItem__img {
+    
+        opacity: 1;
+    
     }
     
     .shopItem__sizes {
