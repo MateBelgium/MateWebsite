@@ -1,0 +1,115 @@
+---
+permalink: /contact.html
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+    <div class="s-section s-section__green">
+        <div class="s-section__content contact__section">
+            <div class="contact__title-container">
+                <h1 class="section__title contact__title">
+                    Contact
+                </h1>
+            </div>
+            <div class="contact__list">
+                <div class="contact__item">
+                        <p class="contact__subtitle">Call Us</p>
+                        <p class="contact__text">++32 4 123 456 78 (EU) <br> 
+                            ++44 123 456 7890 (US)
+                        </p>
+                </div>
+                <div class="contact__item">
+                        <p class="contact__subtitle">Email Us</p>
+                        <p class="contact__text">info@mate.be <br> 
+                            We’ll reply within 24 hours.
+                        </p>
+                </div>
+                <div class="contact__item">
+                        <p class="contact__subtitle">Working Hours</p>
+                        <p class="contact__text">Available Mon-Fri <br> 
+                            9am-6pm GMT
+                        </p>
+                </div>
+            </div>
+            <p class="contact__text">Customer service support, inquiries related to: prices and currency, order and preorder payment, order status, shipment info, return and exchange.</p>
+        </div>
+
+        <div class="contact__form">
+            <p class="contact__subtitle">Get in touch</p>
+            <form action="">
+                <div class="contact__form__item contact__text" >
+                    <input type="text" name="usrname" placeholder="">
+                    <label for="usrname">Name</label>
+                </div>
+                <div class="contact__form__item">
+                    <input type="text" name="usremail">
+                    <label for="usremail" class="contact__text">Email</label>
+                </div>
+                <div class="contact__form__item">
+                    <input type="text" name="usrphone">
+                    <label for="usrphone" class="contact__text">Phone Number (optional)</label>
+                </div>
+                <div class="contact__form__item form__select">
+                    <label for="contact-topic">
+                        <select name="topic" id="contact-topic" class="contact__text">
+                            <option disabled value="select a topic" selected>Select a topic</option>
+                            <option value="Product">Product</option>
+                            <option value="Order">Order</option>
+                            <option value="Payment">Payment</option>
+                            <option value="Return">Return</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="contact__form__item form__select">
+                    <label for="contact-country" class="">
+                        <select id="country" name="contact-country" class="contact__text">
+                            <option disabled value="Select a country" selected>Select a country</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Austria">Austria</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Bulgaria">Bulgaria</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Croatia">Croatia</option>
+                            <option value="Czech Republic">Czech Republic</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Finland">Finland</option>
+                            <option value="France">France</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Liechtenstein">Liechtenstein</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                            <option value="Netherlands">Netherlands</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Romania">Romania</option>
+                            <option value="Slovakia">Slovakia</option>
+                            <option value="Slovenia">Slovenia</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="contact__form__item">
+                    <input type="text" name="usrorder">
+                    <label for="usrorder" class="contact__text">Order Number</label>
+                </div>
+                <div class="contact__form__item">
+                    <input type="text" name="usrmessage">
+                    <label for="usrmessage" class="contact__text">Your Message</label>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}
