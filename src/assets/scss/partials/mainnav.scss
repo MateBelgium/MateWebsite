@@ -39,7 +39,7 @@
 
 }
 
-.mainnav__copyright {
+.mainnav__slickStreet {
 
     display: none;
 
@@ -253,18 +253,39 @@
     
     }
     
-    .mainnav__element > * {
+    .mainnav__slickStreet {
     
-        transform-origin: 50% 50%;
-        transform: rotate(-90deg);  
-    
-    }
-    
-    .mainnav__copyright {
-    
-    
+        width: 100%;
+        height: 100%;
+
         grid-area: 3 / 1 / 4 / 2;
     
+    }
+
+    .slickStreet__container {
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .slickStreet__content {
+
+        width: 28px;
+        height: 145px;
+
+        position: relative;
+
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+
     }
     
     .mainnav__logo {
@@ -273,6 +294,13 @@
 
         border-top-style: solid;
         border-bottom-style: solid;
+
+        img {
+
+            transform-origin: 50% 50%;
+            transform: rotate(-90deg);  
+
+        }
     
     }
     

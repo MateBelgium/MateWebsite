@@ -2,9 +2,22 @@
 
         <div class="mainnav">
           <div class="mainnav__visible">
-            <div class="mainnav__element  mainnav__copyright">
-              <div class="copyright__content">
-                Copyright
+            <div class="mainnav__element  mainnav__slickStreet">
+              <div class="slickStreet__container">
+                    <div class="slickStreet__content">
+                      <label class="selector__label" for="a">
+                          <div class="selector__div"></div>
+                      </label>
+                      <label class="selector__label" for="b">
+                          <div class="selector__div"></div>
+                      </label>
+                      <label class="selector__label" for="c">
+                          <div class="selector__div"></div>
+                      </label>
+                      <svg class="selector__star" width="28" height="145" viewBox="0 0 28 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.0001 145L15.1018 139.275C15.1489 137.808 15.5503 136.356 16.3683 135.148C17.5084 133.464 19.2855 132.266 21.3542 131.906L28 130.75L21.3542 129.594C18.1715 129.041 15.6791 126.503 15.1354 123.264L14 116.5L12.8646 123.264C12.3209 126.504 9.828 129.041 6.6458 129.594L-5.5732e-07 130.75L6.6458 131.906C8.71453 132.265 10.4916 133.463 11.6317 135.148C12.4497 136.356 12.8511 137.808 12.8982 139.275L14.0001 145Z" fill="#1C1C1C"/>
+                      </svg>
+                    </div>
               </div>
             </div>
             <div class="mainnav__element mainnav__logo">
@@ -45,5 +58,9 @@
             </div>
           </div>
         </div>
+
+        <input type="radio" id="a" name="1">
+        <input type="radio" id="b" name="1">
+        <input type="radio" id="c" name="1">
 
       {% endblock %}
