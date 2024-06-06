@@ -24,9 +24,12 @@
                 <img src="assets/img/Mate_Logo.svg" alt="">
             </div>
             <div class="mainnav__element mainnav__star mainnav__button">
-              <img src="assets/img/Mate_Star.svg" alt="">
+              <label for="hiddenNav" class="mainnav__label">
+                <img src="assets/img/Mate_Star.svg" alt="">
+              </label>
             </div>
           </div>
+          <input type="checkbox" class="mainnav__input" id="hiddenNav">
           <div class="mainnav__hidden">
             <ul class="hidden__list">
               <li class="hidden__item hidden__item__selected {% if page.url === '/' %}mainnav__active{% endif %}">

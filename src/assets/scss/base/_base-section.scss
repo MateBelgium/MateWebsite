@@ -13,9 +13,9 @@
 
 
 @media all and (min-width: 745px){
-.s-section {
-    padding: 30px 24px;
-}
+    .s-section {
+        padding: 30px 24px;
+    }
 }
 
 .s-firstSection {
@@ -46,6 +46,10 @@
 
     margin: 0;
     margin-block-end: -4rem;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
     
 }
 
@@ -206,6 +210,9 @@
 
     text-align: center;
    
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
   
 }
   

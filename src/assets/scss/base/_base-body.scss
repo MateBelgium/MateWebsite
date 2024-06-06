@@ -8,10 +8,9 @@ body {
 
 }
 
-body > .body__content {
+.body__content {
 
   position: relative;
-  
 
  }
 
@@ -23,7 +22,7 @@ body > .body__content {
 
   }
 
-  body > .body__content {
+  .body__content {
 
     display: flex;
     flex-direction: row;
@@ -46,13 +45,14 @@ body > .body__content {
 // Hide Scrollbar
 //================
 
+
 /* Hide scrollbar for Chrome, Safari and Opera */
-body  > .body__content::-webkit-scrollbar {
+.hideScrollBar::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-body  > .horizontalScroll {
+.hideScrollBar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
