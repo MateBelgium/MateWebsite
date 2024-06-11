@@ -4,6 +4,12 @@ FOOTER SECTION
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
 
+.footersection {
+
+  border-top: 1px solid var(--color-green-300);
+
+}
+
 .footer__list{
     padding: 0 24px;
     margin-top: 40px;
@@ -51,7 +57,7 @@ FOOTER SECTION
   
     .footersection{
       width: max-content;
-      margin-left: -100px;
+      border-top: 0px solid var(--color-green-300);
     }
   
     .footer__list{
@@ -73,11 +79,11 @@ FOOTER SECTION
     }
   
     .footer__item__title{
-      font-size: 8vh;
+      font-size: 6vh;
     }
     
     .footer__item__info{
-      font-size: 3.5vh;
+      font-size: 2vh;
     }
     
   

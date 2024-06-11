@@ -39,7 +39,7 @@
 
 }
 
-.mainnav__copyright {
+.mainnav__slickStreet {
 
     display: none;
 
@@ -66,6 +66,15 @@
     grid-area: 1 / 2 / 2 / 3;
 
     padding: 12px;
+
+    transform: rotate(0deg);
+
+}
+
+.mainnav__label {
+    
+    width: 100%;
+    height: 100%;
 
 }
 
@@ -205,6 +214,25 @@
 
 }
 
+/* ====== INPUT ======= */
+
+.mainnav__input {
+    display: none;
+}
+
+.mainnav__input:checked + .mainnav__hidden {
+
+    left: 0;
+
+}
+
+.mainnav:has(.mainnav__input:checked) .mainnav__star img {
+
+    transform: rotate(135deg);
+
+}
+
+
 // =========================
 //       SIDE SCROLL
 // =========================
@@ -253,18 +281,57 @@
     
     }
     
-    .mainnav__element > * {
+    .mainnav__slickStreet {
     
-        transform-origin: 50% 50%;
-        transform: rotate(-90deg);  
-    
-    }
-    
-    .mainnav__copyright {
-    
-    
+        width: 100%;
+        height: 100%;
+
         grid-area: 3 / 1 / 4 / 2;
     
+    }
+
+    .slickStreet__container {
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .slickStreet__content {
+
+        width: 28px;
+        height: 145px;
+
+        position: relative;
+
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .slickStreet__text {
+
+        position: absolute;
+        
+    }
+
+    .slickStreet__content .slickStreet__text:nth-of-type(1) {
+
+        bottom: -3.5rem;
+
+    }
+
+    .slickStreet__content .slickStreet__text:nth-of-type(2) {
+
+        top: -3rem;
+
     }
     
     .mainnav__logo {
@@ -273,6 +340,13 @@
 
         border-top-style: solid;
         border-bottom-style: solid;
+
+        img {
+
+            transform-origin: 50% 50%;
+            transform: rotate(-90deg);  
+
+        }
     
     }
     
@@ -283,6 +357,7 @@
         padding: 24px;
     
     }
+
 
     .mainnav__button {
 
@@ -300,10 +375,11 @@
 
         cursor: pointer;
         background-color: var(--color-green-400);
-
+        
         img {
-
-            transform: scale(1.1) rotate(-90deg);
+            
+            cursor: pointer;
+            transform: scale(1.1);
 
         }
 
@@ -398,6 +474,15 @@
         margin-inline: 60px;
 
     }
+
+    /* ====== INPUT ======= */
+    
+    .mainnav__input:checked + .mainnav__hidden {
+
+        left: 120px;
+
+    }
+
 
 }
 

@@ -1,3 +1,13 @@
+/* ====================
+        NONE JS
+==================== */
+
+document.querySelector(".body__content").classList.add("hideScrollBar");
+
+/* ====================
+        Resize
+==================== */
+
 var windowWidth = window.innerWidth;
 
 addEventListener("resize", onResize);
@@ -7,6 +17,10 @@ function onResize() {
   windowWidth = window.innerWidth;
 
 }
+
+/* ====================
+        Scroll
+==================== */
 
 const element = document.querySelector(".body__content");
 
@@ -45,9 +59,9 @@ element.addEventListener('wheel', (event) => {
 });
 
 
-// ============
-// Drag click slide
-// ============
+/* ====================
+      Drag Click
+==================== */
 
 const slider = document.querySelector('.body__content');
 let isDown = false;
@@ -116,10 +130,11 @@ let isDown = false;
   }
 
 
-// ============
-// Nav
-// ============
+/* ====================
+        NAV
+==================== */
 
+/*
 const navButtonEl = document.querySelector(".mainnav__button");
 const navStarEl = navButtonEl.querySelector("img")
 const navHiddenEl = document.querySelector(".mainnav__hidden");
@@ -153,8 +168,7 @@ function onNavButtonClick(e) {
 
   }
 
-
-
   ISnavVisible = !ISnavVisible;
 
 }
+  */
