@@ -315,6 +315,24 @@
         justify-content: space-between;
 
     }
+
+    .slickStreet__text {
+
+        position: absolute;
+        
+    }
+
+    .slickStreet__content .slickStreet__text:nth-of-type(1) {
+
+        bottom: -3.5rem;
+
+    }
+
+    .slickStreet__content .slickStreet__text:nth-of-type(2) {
+
+        top: -3rem;
+
+    }
     
     .mainnav__logo {
     
