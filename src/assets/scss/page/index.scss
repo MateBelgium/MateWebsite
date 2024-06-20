@@ -348,10 +348,59 @@ LEARN CARDS
   justify-content: center;
   align-items: center;
 
-  background-image: url(../../assets/img/ardennesMountains.JPG);
+  background-image: url(../img/ardennesMountains.JPG);
   background-size: 100%;
 
   height: 180px;
+
+}
+
+.learn__summary2 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(../img/ardennesQuality.JPG);
+  background-size: 100%;
+
+  height: 180px;
+
+}
+
+#slick:checked ~ div .learn__summary{
+
+  background-image: url(../img/ardennesMountains.JPG);
+
+}
+
+#slick:checked ~ div .learn__summary2{
+
+  background-image: url(../img/ardennesQuality.JPG);
+
+}
+
+#mix:checked ~ div .learn__summary{
+
+  background-image: url(../img/mountainFrame.png);
+
+}
+
+#mix:checked ~ div .learn__summary2{
+
+  background-image: url(../img/ardennesQuality.JPG);
+
+}
+
+#street:checked ~ div .learn__summary{
+  
+  background-image: url(../img/mateWebMountain.gif);
+
+}
+
+#street:checked ~ div .learn__summary2{
+  
+  background-image: url(../img/ardennesQuality.JPG);
 
 }
 
