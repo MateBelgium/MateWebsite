@@ -242,7 +242,7 @@ ABOUT US TEAM SECTION
 }
 
 .au__teamMember__image{
-    background-image: url(../img/shopsection1.png);
+    background-image: url(../img/MoiFrame.png);
     background-size: cover;
     background-position: 50% 20%;
     height: 235px;
@@ -314,4 +314,22 @@ ABOUT US TEAM SECTION
     .au__teamMember__title{
         color: var(--color-accent);
     }
+}
+
+
+#slick:checked ~ div .au__teamMember__image{
+
+    background-image: url(../img/MoiFrame.png);
+
+}
+
+#mix:checked ~ div .au__teamMember__image {
+
+    background-image: url(../img/50picture.png);
+}
+
+#street:checked ~ div .au__teamMember__image{
+    
+    background-image: url(../img/Moi.gif);
+
 }
