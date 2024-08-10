@@ -8,7 +8,16 @@
   --fontstack-alt: "Panchang", "Arial", system-ui, sans-serif;
 }
 
+/* ===================================
+=default typo
+=================================== */
 
+a {
+
+  text-decoration: none;
+  color: inherit;
+
+}
 
 h1 {
 
@@ -31,8 +40,6 @@ h2 {
 
 }
 
-
-
 @media all and (min-width: 1024px) {
   h1 {
     font-size: 25vh;
@@ -44,13 +51,4 @@ h2 {
     font-size: 4vh;
 
   }
-}
-
-
-
-a {
-
-  text-decoration: none;
-  color: inherit;
-
 }

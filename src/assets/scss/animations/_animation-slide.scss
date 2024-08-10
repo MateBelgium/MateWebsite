@@ -8,7 +8,7 @@
   }
 }
 
-.anim__backgroundimg {
+.a-img__parallax {
 
 animation-timeline: view(block);
 
@@ -33,7 +33,7 @@ background-position: center center;
       }
     }
 
-  .anim__backgroundimg {
+  .a-img__parallax {
 
     animation-timeline: view(inline);
 
@@ -41,7 +41,7 @@ background-position: center center;
 
 }
 
-@keyframes slideRight {
+@keyframes a-slide__right {
     0% {
         opacity: 1;
         transform: translate(-25%, 0);
@@ -53,8 +53,8 @@ background-position: center center;
     }
   }
 
-.slideRight {
-    animation: slideRight 0.2s ease-out both;
+.a-slide__right {
+    animation: a-slide__right 0.2s ease-out both;
     animation-timeline: view(block);
     animation-range: 0% 100%;
     animation-fill-mode: none;
@@ -63,7 +63,7 @@ background-position: center center;
 }
   
 
-@keyframes slideFromTop {
+@keyframes a-slide__bottom {
   0% {
       transform: translate(0, -10%);
   }
@@ -73,18 +73,18 @@ background-position: center center;
   }
 }
 
-.slideFromTop {
+.a-slide__bottom {
 
   animation-timeline: view(inline);
 
-  animation-name: slideFromTop;
+  animation-name: a-slide__bottom;
   animation-range: 0% 50%;
   animation-fill-mode: none;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
   transform: translate(0, 0);
 }
 
-@keyframes slideFromBottom {
+@keyframes a-slide__top {
   0% {
       transform: translate(0, 10%);
   }
@@ -94,11 +94,11 @@ background-position: center center;
   }
 }
 
-.slideFromBottom {
+.a-slide__top {
 
   animation-timeline: view(inline);
 
-  animation-name: slideFromBottom;
+  animation-name: a-slide__top;
   animation-range: 0% 50%;
   animation-fill-mode: noe;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
