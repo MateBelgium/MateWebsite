@@ -24,3 +24,21 @@
     font-display: swap;
     font-style: italic;
   }
+
+  @font-face {
+    font-family: "Sentient";
+    src: url("../fonts/Sentient-Variable.woff2") format("woff2-variations"),
+    url("../fonts/Sentient-Variable.woff2") format("woff2") tech("variations");
+    font-weight: 100 1000;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Sentient";
+    src: url("../fonts/Sentient-VariableItalic.woff2") format("woff2"),
+    url("../fonts/Sentient-VariableItalic.woff2") format("woff2") tech("variations");
+    font-weight: 100 1000;
+    font-display: swap;
+    font-style: italic;
+  }
